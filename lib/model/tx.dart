@@ -1,4 +1,3 @@
-import 'dart:ffi';
 import 'dart:typed_data';
 
 import 'package:protospacemesh/xdr/xdr_data_io.dart';
