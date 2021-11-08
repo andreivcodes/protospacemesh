@@ -9,7 +9,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'types.pb.dart' as $0;
+import 'types.pb.dart' as $7;
 
 export 'mesh_types.pbenum.dart';
 
@@ -44,13 +44,13 @@ class GenesisTimeRequest extends $pb.GeneratedMessage {
 
 class GenesisTimeResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GenesisTimeResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$0.SimpleInt>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unixtime', subBuilder: $0.SimpleInt.create)
+    ..aOM<$7.SimpleInt>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unixtime', subBuilder: $7.SimpleInt.create)
     ..hasRequiredFields = false
   ;
 
   GenesisTimeResponse._() : super();
   factory GenesisTimeResponse({
-    $0.SimpleInt? unixtime,
+    $7.SimpleInt? unixtime,
   }) {
     final _result = create();
     if (unixtime != null) {
@@ -80,15 +80,15 @@ class GenesisTimeResponse extends $pb.GeneratedMessage {
   static GenesisTimeResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $0.SimpleInt get unixtime => $_getN(0);
+  $7.SimpleInt get unixtime => $_getN(0);
   @$pb.TagNumber(1)
-  set unixtime($0.SimpleInt v) { setField(1, v); }
+  set unixtime($7.SimpleInt v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasUnixtime() => $_has(0);
   @$pb.TagNumber(1)
   void clearUnixtime() => clearField(1);
   @$pb.TagNumber(1)
-  $0.SimpleInt ensureUnixtime() => $_ensure(0);
+  $7.SimpleInt ensureUnixtime() => $_ensure(0);
 }
 
 class CurrentLayerRequest extends $pb.GeneratedMessage {
@@ -122,13 +122,13 @@ class CurrentLayerRequest extends $pb.GeneratedMessage {
 
 class CurrentLayerResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CurrentLayerResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$0.LayerNumber>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'layernum', subBuilder: $0.LayerNumber.create)
+    ..aOM<$7.LayerNumber>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'layernum', subBuilder: $7.LayerNumber.create)
     ..hasRequiredFields = false
   ;
 
   CurrentLayerResponse._() : super();
   factory CurrentLayerResponse({
-    $0.LayerNumber? layernum,
+    $7.LayerNumber? layernum,
   }) {
     final _result = create();
     if (layernum != null) {
@@ -158,15 +158,15 @@ class CurrentLayerResponse extends $pb.GeneratedMessage {
   static CurrentLayerResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $0.LayerNumber get layernum => $_getN(0);
+  $7.LayerNumber get layernum => $_getN(0);
   @$pb.TagNumber(1)
-  set layernum($0.LayerNumber v) { setField(1, v); }
+  set layernum($7.LayerNumber v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasLayernum() => $_has(0);
   @$pb.TagNumber(1)
   void clearLayernum() => clearField(1);
   @$pb.TagNumber(1)
-  $0.LayerNumber ensureLayernum() => $_ensure(0);
+  $7.LayerNumber ensureLayernum() => $_ensure(0);
 }
 
 class CurrentEpochRequest extends $pb.GeneratedMessage {
@@ -200,13 +200,13 @@ class CurrentEpochRequest extends $pb.GeneratedMessage {
 
 class CurrentEpochResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CurrentEpochResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$0.SimpleInt>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'epochnum', subBuilder: $0.SimpleInt.create)
+    ..aOM<$7.SimpleInt>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'epochnum', subBuilder: $7.SimpleInt.create)
     ..hasRequiredFields = false
   ;
 
   CurrentEpochResponse._() : super();
   factory CurrentEpochResponse({
-    $0.SimpleInt? epochnum,
+    $7.SimpleInt? epochnum,
   }) {
     final _result = create();
     if (epochnum != null) {
@@ -236,15 +236,15 @@ class CurrentEpochResponse extends $pb.GeneratedMessage {
   static CurrentEpochResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $0.SimpleInt get epochnum => $_getN(0);
+  $7.SimpleInt get epochnum => $_getN(0);
   @$pb.TagNumber(1)
-  set epochnum($0.SimpleInt v) { setField(1, v); }
+  set epochnum($7.SimpleInt v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasEpochnum() => $_has(0);
   @$pb.TagNumber(1)
   void clearEpochnum() => clearField(1);
   @$pb.TagNumber(1)
-  $0.SimpleInt ensureEpochnum() => $_ensure(0);
+  $7.SimpleInt ensureEpochnum() => $_ensure(0);
 }
 
 class NetIDRequest extends $pb.GeneratedMessage {
@@ -278,13 +278,13 @@ class NetIDRequest extends $pb.GeneratedMessage {
 
 class NetIDResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'NetIDResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$0.SimpleInt>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'netid', subBuilder: $0.SimpleInt.create)
+    ..aOM<$7.SimpleInt>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'netid', subBuilder: $7.SimpleInt.create)
     ..hasRequiredFields = false
   ;
 
   NetIDResponse._() : super();
   factory NetIDResponse({
-    $0.SimpleInt? netid,
+    $7.SimpleInt? netid,
   }) {
     final _result = create();
     if (netid != null) {
@@ -314,15 +314,15 @@ class NetIDResponse extends $pb.GeneratedMessage {
   static NetIDResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $0.SimpleInt get netid => $_getN(0);
+  $7.SimpleInt get netid => $_getN(0);
   @$pb.TagNumber(1)
-  set netid($0.SimpleInt v) { setField(1, v); }
+  set netid($7.SimpleInt v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasNetid() => $_has(0);
   @$pb.TagNumber(1)
   void clearNetid() => clearField(1);
   @$pb.TagNumber(1)
-  $0.SimpleInt ensureNetid() => $_ensure(0);
+  $7.SimpleInt ensureNetid() => $_ensure(0);
 }
 
 class EpochNumLayersRequest extends $pb.GeneratedMessage {
@@ -356,13 +356,13 @@ class EpochNumLayersRequest extends $pb.GeneratedMessage {
 
 class EpochNumLayersResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'EpochNumLayersResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$0.SimpleInt>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'numlayers', subBuilder: $0.SimpleInt.create)
+    ..aOM<$7.SimpleInt>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'numlayers', subBuilder: $7.SimpleInt.create)
     ..hasRequiredFields = false
   ;
 
   EpochNumLayersResponse._() : super();
   factory EpochNumLayersResponse({
-    $0.SimpleInt? numlayers,
+    $7.SimpleInt? numlayers,
   }) {
     final _result = create();
     if (numlayers != null) {
@@ -392,15 +392,15 @@ class EpochNumLayersResponse extends $pb.GeneratedMessage {
   static EpochNumLayersResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $0.SimpleInt get numlayers => $_getN(0);
+  $7.SimpleInt get numlayers => $_getN(0);
   @$pb.TagNumber(1)
-  set numlayers($0.SimpleInt v) { setField(1, v); }
+  set numlayers($7.SimpleInt v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasNumlayers() => $_has(0);
   @$pb.TagNumber(1)
   void clearNumlayers() => clearField(1);
   @$pb.TagNumber(1)
-  $0.SimpleInt ensureNumlayers() => $_ensure(0);
+  $7.SimpleInt ensureNumlayers() => $_ensure(0);
 }
 
 class LayerDurationRequest extends $pb.GeneratedMessage {
@@ -434,13 +434,13 @@ class LayerDurationRequest extends $pb.GeneratedMessage {
 
 class LayerDurationResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'LayerDurationResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$0.SimpleInt>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'duration', subBuilder: $0.SimpleInt.create)
+    ..aOM<$7.SimpleInt>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'duration', subBuilder: $7.SimpleInt.create)
     ..hasRequiredFields = false
   ;
 
   LayerDurationResponse._() : super();
   factory LayerDurationResponse({
-    $0.SimpleInt? duration,
+    $7.SimpleInt? duration,
   }) {
     final _result = create();
     if (duration != null) {
@@ -470,15 +470,15 @@ class LayerDurationResponse extends $pb.GeneratedMessage {
   static LayerDurationResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $0.SimpleInt get duration => $_getN(0);
+  $7.SimpleInt get duration => $_getN(0);
   @$pb.TagNumber(1)
-  set duration($0.SimpleInt v) { setField(1, v); }
+  set duration($7.SimpleInt v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasDuration() => $_has(0);
   @$pb.TagNumber(1)
   void clearDuration() => clearField(1);
   @$pb.TagNumber(1)
-  $0.SimpleInt ensureDuration() => $_ensure(0);
+  $7.SimpleInt ensureDuration() => $_ensure(0);
 }
 
 class MaxTransactionsPerSecondRequest extends $pb.GeneratedMessage {
@@ -512,13 +512,13 @@ class MaxTransactionsPerSecondRequest extends $pb.GeneratedMessage {
 
 class MaxTransactionsPerSecondResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MaxTransactionsPerSecondResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$0.SimpleInt>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'maxTxsPerSecond', subBuilder: $0.SimpleInt.create)
+    ..aOM<$7.SimpleInt>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'maxTxsPerSecond', subBuilder: $7.SimpleInt.create)
     ..hasRequiredFields = false
   ;
 
   MaxTransactionsPerSecondResponse._() : super();
   factory MaxTransactionsPerSecondResponse({
-    $0.SimpleInt? maxTxsPerSecond,
+    $7.SimpleInt? maxTxsPerSecond,
   }) {
     final _result = create();
     if (maxTxsPerSecond != null) {
@@ -548,27 +548,27 @@ class MaxTransactionsPerSecondResponse extends $pb.GeneratedMessage {
   static MaxTransactionsPerSecondResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $0.SimpleInt get maxTxsPerSecond => $_getN(0);
+  $7.SimpleInt get maxTxsPerSecond => $_getN(0);
   @$pb.TagNumber(1)
-  set maxTxsPerSecond($0.SimpleInt v) { setField(1, v); }
+  set maxTxsPerSecond($7.SimpleInt v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMaxTxsPerSecond() => $_has(0);
   @$pb.TagNumber(1)
   void clearMaxTxsPerSecond() => clearField(1);
   @$pb.TagNumber(1)
-  $0.SimpleInt ensureMaxTxsPerSecond() => $_ensure(0);
+  $7.SimpleInt ensureMaxTxsPerSecond() => $_ensure(0);
 }
 
 class AccountMeshDataFilter extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AccountMeshDataFilter', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$0.AccountId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountId', subBuilder: $0.AccountId.create)
+    ..aOM<$7.AccountId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountId', subBuilder: $7.AccountId.create)
     ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountMeshDataFlags', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
   AccountMeshDataFilter._() : super();
   factory AccountMeshDataFilter({
-    $0.AccountId? accountId,
+    $7.AccountId? accountId,
     $core.int? accountMeshDataFlags,
   }) {
     final _result = create();
@@ -602,15 +602,15 @@ class AccountMeshDataFilter extends $pb.GeneratedMessage {
   static AccountMeshDataFilter? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $0.AccountId get accountId => $_getN(0);
+  $7.AccountId get accountId => $_getN(0);
   @$pb.TagNumber(1)
-  set accountId($0.AccountId v) { setField(1, v); }
+  set accountId($7.AccountId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAccountId() => $_has(0);
   @$pb.TagNumber(1)
   void clearAccountId() => clearField(1);
   @$pb.TagNumber(1)
-  $0.AccountId ensureAccountId() => $_ensure(0);
+  $7.AccountId ensureAccountId() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.int get accountMeshDataFlags => $_getIZ(1);
@@ -636,15 +636,15 @@ class AccountMeshData extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AccountMeshData', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..aOM<$0.MeshTransaction>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'meshTransaction', subBuilder: $0.MeshTransaction.create)
-    ..aOM<$0.Activation>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'activation', subBuilder: $0.Activation.create)
+    ..aOM<$7.MeshTransaction>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'meshTransaction', subBuilder: $7.MeshTransaction.create)
+    ..aOM<$7.Activation>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'activation', subBuilder: $7.Activation.create)
     ..hasRequiredFields = false
   ;
 
   AccountMeshData._() : super();
   factory AccountMeshData({
-    $0.MeshTransaction? meshTransaction,
-    $0.Activation? activation,
+    $7.MeshTransaction? meshTransaction,
+    $7.Activation? activation,
   }) {
     final _result = create();
     if (meshTransaction != null) {
@@ -680,26 +680,26 @@ class AccountMeshData extends $pb.GeneratedMessage {
   void clearDatum() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
-  $0.MeshTransaction get meshTransaction => $_getN(0);
+  $7.MeshTransaction get meshTransaction => $_getN(0);
   @$pb.TagNumber(1)
-  set meshTransaction($0.MeshTransaction v) { setField(1, v); }
+  set meshTransaction($7.MeshTransaction v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMeshTransaction() => $_has(0);
   @$pb.TagNumber(1)
   void clearMeshTransaction() => clearField(1);
   @$pb.TagNumber(1)
-  $0.MeshTransaction ensureMeshTransaction() => $_ensure(0);
+  $7.MeshTransaction ensureMeshTransaction() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $0.Activation get activation => $_getN(1);
+  $7.Activation get activation => $_getN(1);
   @$pb.TagNumber(2)
-  set activation($0.Activation v) { setField(2, v); }
+  set activation($7.Activation v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasActivation() => $_has(1);
   @$pb.TagNumber(2)
   void clearActivation() => clearField(2);
   @$pb.TagNumber(2)
-  $0.Activation ensureActivation() => $_ensure(1);
+  $7.Activation ensureActivation() => $_ensure(1);
 }
 
 class AccountMeshDataStreamRequest extends $pb.GeneratedMessage {
@@ -803,7 +803,7 @@ class AccountMeshDataStreamResponse extends $pb.GeneratedMessage {
 class AccountMeshDataQueryRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AccountMeshDataQueryRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
     ..aOM<AccountMeshDataFilter>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'filter', subBuilder: AccountMeshDataFilter.create)
-    ..aOM<$0.LayerNumber>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'minLayer', subBuilder: $0.LayerNumber.create)
+    ..aOM<$7.LayerNumber>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'minLayer', subBuilder: $7.LayerNumber.create)
     ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'maxResults', $pb.PbFieldType.OU3)
     ..a<$core.int>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'offset', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
@@ -812,7 +812,7 @@ class AccountMeshDataQueryRequest extends $pb.GeneratedMessage {
   AccountMeshDataQueryRequest._() : super();
   factory AccountMeshDataQueryRequest({
     AccountMeshDataFilter? filter,
-    $0.LayerNumber? minLayer,
+    $7.LayerNumber? minLayer,
     $core.int? maxResults,
     $core.int? offset,
   }) {
@@ -864,15 +864,15 @@ class AccountMeshDataQueryRequest extends $pb.GeneratedMessage {
   AccountMeshDataFilter ensureFilter() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $0.LayerNumber get minLayer => $_getN(1);
+  $7.LayerNumber get minLayer => $_getN(1);
   @$pb.TagNumber(2)
-  set minLayer($0.LayerNumber v) { setField(2, v); }
+  set minLayer($7.LayerNumber v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasMinLayer() => $_has(1);
   @$pb.TagNumber(2)
   void clearMinLayer() => clearField(2);
   @$pb.TagNumber(2)
-  $0.LayerNumber ensureMinLayer() => $_ensure(1);
+  $7.LayerNumber ensureMinLayer() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $core.int get maxResults => $_getIZ(2);
@@ -950,15 +950,15 @@ class AccountMeshDataQueryResponse extends $pb.GeneratedMessage {
 
 class LayersQueryRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'LayersQueryRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$0.LayerNumber>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'startLayer', subBuilder: $0.LayerNumber.create)
-    ..aOM<$0.LayerNumber>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endLayer', subBuilder: $0.LayerNumber.create)
+    ..aOM<$7.LayerNumber>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'startLayer', subBuilder: $7.LayerNumber.create)
+    ..aOM<$7.LayerNumber>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endLayer', subBuilder: $7.LayerNumber.create)
     ..hasRequiredFields = false
   ;
 
   LayersQueryRequest._() : super();
   factory LayersQueryRequest({
-    $0.LayerNumber? startLayer,
-    $0.LayerNumber? endLayer,
+    $7.LayerNumber? startLayer,
+    $7.LayerNumber? endLayer,
   }) {
     final _result = create();
     if (startLayer != null) {
@@ -991,37 +991,37 @@ class LayersQueryRequest extends $pb.GeneratedMessage {
   static LayersQueryRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $0.LayerNumber get startLayer => $_getN(0);
+  $7.LayerNumber get startLayer => $_getN(0);
   @$pb.TagNumber(1)
-  set startLayer($0.LayerNumber v) { setField(1, v); }
+  set startLayer($7.LayerNumber v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStartLayer() => $_has(0);
   @$pb.TagNumber(1)
   void clearStartLayer() => clearField(1);
   @$pb.TagNumber(1)
-  $0.LayerNumber ensureStartLayer() => $_ensure(0);
+  $7.LayerNumber ensureStartLayer() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $0.LayerNumber get endLayer => $_getN(1);
+  $7.LayerNumber get endLayer => $_getN(1);
   @$pb.TagNumber(2)
-  set endLayer($0.LayerNumber v) { setField(2, v); }
+  set endLayer($7.LayerNumber v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasEndLayer() => $_has(1);
   @$pb.TagNumber(2)
   void clearEndLayer() => clearField(2);
   @$pb.TagNumber(2)
-  $0.LayerNumber ensureEndLayer() => $_ensure(1);
+  $7.LayerNumber ensureEndLayer() => $_ensure(1);
 }
 
 class LayersQueryResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'LayersQueryResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..pc<$0.Layer>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'layer', $pb.PbFieldType.PM, subBuilder: $0.Layer.create)
+    ..pc<$7.Layer>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'layer', $pb.PbFieldType.PM, subBuilder: $7.Layer.create)
     ..hasRequiredFields = false
   ;
 
   LayersQueryResponse._() : super();
   factory LayersQueryResponse({
-    $core.Iterable<$0.Layer>? layer,
+    $core.Iterable<$7.Layer>? layer,
   }) {
     final _result = create();
     if (layer != null) {
@@ -1051,7 +1051,7 @@ class LayersQueryResponse extends $pb.GeneratedMessage {
   static LayersQueryResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$0.Layer> get layer => $_getList(0);
+  $core.List<$7.Layer> get layer => $_getList(0);
 }
 
 class LayerStreamRequest extends $pb.GeneratedMessage {
@@ -1085,13 +1085,13 @@ class LayerStreamRequest extends $pb.GeneratedMessage {
 
 class LayerStreamResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'LayerStreamResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$0.Layer>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'layer', subBuilder: $0.Layer.create)
+    ..aOM<$7.Layer>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'layer', subBuilder: $7.Layer.create)
     ..hasRequiredFields = false
   ;
 
   LayerStreamResponse._() : super();
   factory LayerStreamResponse({
-    $0.Layer? layer,
+    $7.Layer? layer,
   }) {
     final _result = create();
     if (layer != null) {
@@ -1121,14 +1121,14 @@ class LayerStreamResponse extends $pb.GeneratedMessage {
   static LayerStreamResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $0.Layer get layer => $_getN(0);
+  $7.Layer get layer => $_getN(0);
   @$pb.TagNumber(1)
-  set layer($0.Layer v) { setField(1, v); }
+  set layer($7.Layer v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasLayer() => $_has(0);
   @$pb.TagNumber(1)
   void clearLayer() => clearField(1);
   @$pb.TagNumber(1)
-  $0.Layer ensureLayer() => $_ensure(0);
+  $7.Layer ensureLayer() => $_ensure(0);
 }
 

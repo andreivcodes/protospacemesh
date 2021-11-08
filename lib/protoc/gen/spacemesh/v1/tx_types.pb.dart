@@ -9,8 +9,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'types.pb.dart' as $0;
-import '../../google/rpc/status.pb.dart' as $3;
+import 'types.pb.dart' as $7;
+import '../../google/rpc/status.pb.dart' as $9;
 
 import 'tx_types.pbenum.dart';
 
@@ -18,13 +18,13 @@ export 'tx_types.pbenum.dart';
 
 class TransactionsIds extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransactionsIds', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..pc<$0.TransactionId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionId', $pb.PbFieldType.PM, subBuilder: $0.TransactionId.create)
+    ..pc<$7.TransactionId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionId', $pb.PbFieldType.PM, subBuilder: $7.TransactionId.create)
     ..hasRequiredFields = false
   ;
 
   TransactionsIds._() : super();
   factory TransactionsIds({
-    $core.Iterable<$0.TransactionId>? transactionId,
+    $core.Iterable<$7.TransactionId>? transactionId,
   }) {
     final _result = create();
     if (transactionId != null) {
@@ -54,7 +54,7 @@ class TransactionsIds extends $pb.GeneratedMessage {
   static TransactionsIds? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$0.TransactionId> get transactionId => $_getList(0);
+  $core.List<$7.TransactionId> get transactionId => $_getList(0);
 }
 
 class SubmitTransactionRequest extends $pb.GeneratedMessage {
@@ -106,14 +106,14 @@ class SubmitTransactionRequest extends $pb.GeneratedMessage {
 
 class SubmitTransactionResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SubmitTransactionResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$3.Status>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: $3.Status.create)
+    ..aOM<$9.Status>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: $9.Status.create)
     ..aOM<TransactionState>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'txstate', subBuilder: TransactionState.create)
     ..hasRequiredFields = false
   ;
 
   SubmitTransactionResponse._() : super();
   factory SubmitTransactionResponse({
-    $3.Status? status,
+    $9.Status? status,
     TransactionState? txstate,
   }) {
     final _result = create();
@@ -147,15 +147,15 @@ class SubmitTransactionResponse extends $pb.GeneratedMessage {
   static SubmitTransactionResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.Status get status => $_getN(0);
+  $9.Status get status => $_getN(0);
   @$pb.TagNumber(1)
-  set status($3.Status v) { setField(1, v); }
+  set status($9.Status v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStatus() => $_has(0);
   @$pb.TagNumber(1)
   void clearStatus() => clearField(1);
   @$pb.TagNumber(1)
-  $3.Status ensureStatus() => $_ensure(0);
+  $9.Status ensureStatus() => $_ensure(0);
 
   @$pb.TagNumber(2)
   TransactionState get txstate => $_getN(1);
@@ -171,14 +171,14 @@ class SubmitTransactionResponse extends $pb.GeneratedMessage {
 
 class TransactionsStateRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransactionsStateRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..pc<$0.TransactionId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionId', $pb.PbFieldType.PM, subBuilder: $0.TransactionId.create)
+    ..pc<$7.TransactionId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionId', $pb.PbFieldType.PM, subBuilder: $7.TransactionId.create)
     ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'includeTransactions')
     ..hasRequiredFields = false
   ;
 
   TransactionsStateRequest._() : super();
   factory TransactionsStateRequest({
-    $core.Iterable<$0.TransactionId>? transactionId,
+    $core.Iterable<$7.TransactionId>? transactionId,
     $core.bool? includeTransactions,
   }) {
     final _result = create();
@@ -212,7 +212,7 @@ class TransactionsStateRequest extends $pb.GeneratedMessage {
   static TransactionsStateRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$0.TransactionId> get transactionId => $_getList(0);
+  $core.List<$7.TransactionId> get transactionId => $_getList(0);
 
   @$pb.TagNumber(2)
   $core.bool get includeTransactions => $_getBF(1);
@@ -227,14 +227,14 @@ class TransactionsStateRequest extends $pb.GeneratedMessage {
 class TransactionsStateResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransactionsStateResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
     ..pc<TransactionState>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionsState', $pb.PbFieldType.PM, subBuilder: TransactionState.create)
-    ..pc<$0.Transaction>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactions', $pb.PbFieldType.PM, subBuilder: $0.Transaction.create)
+    ..pc<$7.Transaction>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactions', $pb.PbFieldType.PM, subBuilder: $7.Transaction.create)
     ..hasRequiredFields = false
   ;
 
   TransactionsStateResponse._() : super();
   factory TransactionsStateResponse({
     $core.Iterable<TransactionState>? transactionsState,
-    $core.Iterable<$0.Transaction>? transactions,
+    $core.Iterable<$7.Transaction>? transactions,
   }) {
     final _result = create();
     if (transactionsState != null) {
@@ -270,19 +270,19 @@ class TransactionsStateResponse extends $pb.GeneratedMessage {
   $core.List<TransactionState> get transactionsState => $_getList(0);
 
   @$pb.TagNumber(2)
-  $core.List<$0.Transaction> get transactions => $_getList(1);
+  $core.List<$7.Transaction> get transactions => $_getList(1);
 }
 
 class TransactionsStateStreamRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransactionsStateStreamRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..pc<$0.TransactionId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionId', $pb.PbFieldType.PM, subBuilder: $0.TransactionId.create)
+    ..pc<$7.TransactionId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionId', $pb.PbFieldType.PM, subBuilder: $7.TransactionId.create)
     ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'includeTransactions')
     ..hasRequiredFields = false
   ;
 
   TransactionsStateStreamRequest._() : super();
   factory TransactionsStateStreamRequest({
-    $core.Iterable<$0.TransactionId>? transactionId,
+    $core.Iterable<$7.TransactionId>? transactionId,
     $core.bool? includeTransactions,
   }) {
     final _result = create();
@@ -316,7 +316,7 @@ class TransactionsStateStreamRequest extends $pb.GeneratedMessage {
   static TransactionsStateStreamRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$0.TransactionId> get transactionId => $_getList(0);
+  $core.List<$7.TransactionId> get transactionId => $_getList(0);
 
   @$pb.TagNumber(2)
   $core.bool get includeTransactions => $_getBF(1);
@@ -331,14 +331,14 @@ class TransactionsStateStreamRequest extends $pb.GeneratedMessage {
 class TransactionsStateStreamResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransactionsStateStreamResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
     ..aOM<TransactionState>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionState', subBuilder: TransactionState.create)
-    ..aOM<$0.Transaction>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transaction', subBuilder: $0.Transaction.create)
+    ..aOM<$7.Transaction>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transaction', subBuilder: $7.Transaction.create)
     ..hasRequiredFields = false
   ;
 
   TransactionsStateStreamResponse._() : super();
   factory TransactionsStateStreamResponse({
     TransactionState? transactionState,
-    $0.Transaction? transaction,
+    $7.Transaction? transaction,
   }) {
     final _result = create();
     if (transactionState != null) {
@@ -382,27 +382,27 @@ class TransactionsStateStreamResponse extends $pb.GeneratedMessage {
   TransactionState ensureTransactionState() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $0.Transaction get transaction => $_getN(1);
+  $7.Transaction get transaction => $_getN(1);
   @$pb.TagNumber(2)
-  set transaction($0.Transaction v) { setField(2, v); }
+  set transaction($7.Transaction v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasTransaction() => $_has(1);
   @$pb.TagNumber(2)
   void clearTransaction() => clearField(2);
   @$pb.TagNumber(2)
-  $0.Transaction ensureTransaction() => $_ensure(1);
+  $7.Transaction ensureTransaction() => $_ensure(1);
 }
 
 class TransactionState extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransactionState', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$0.TransactionId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', subBuilder: $0.TransactionId.create)
+    ..aOM<$7.TransactionId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', subBuilder: $7.TransactionId.create)
     ..e<TransactionState_TransactionState>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: TransactionState_TransactionState.TRANSACTION_STATE_UNSPECIFIED, valueOf: TransactionState_TransactionState.valueOf, enumValues: TransactionState_TransactionState.values)
     ..hasRequiredFields = false
   ;
 
   TransactionState._() : super();
   factory TransactionState({
-    $0.TransactionId? id,
+    $7.TransactionId? id,
     TransactionState_TransactionState? state,
   }) {
     final _result = create();
@@ -436,15 +436,15 @@ class TransactionState extends $pb.GeneratedMessage {
   static TransactionState? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $0.TransactionId get id => $_getN(0);
+  $7.TransactionId get id => $_getN(0);
   @$pb.TagNumber(1)
-  set id($0.TransactionId v) { setField(1, v); }
+  set id($7.TransactionId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
   void clearId() => clearField(1);
   @$pb.TagNumber(1)
-  $0.TransactionId ensureId() => $_ensure(0);
+  $7.TransactionId ensureId() => $_ensure(0);
 
   @$pb.TagNumber(2)
   TransactionState_TransactionState get state => $_getN(1);
