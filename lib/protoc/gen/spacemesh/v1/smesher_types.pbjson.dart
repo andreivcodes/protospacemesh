@@ -8,19 +8,6 @@
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
 import 'dart:typed_data' as $typed_data;
-@$core.Deprecated('Use computeApiClassDescriptor instead')
-const ComputeApiClass$json = const {
-  '1': 'ComputeApiClass',
-  '2': const [
-    const {'1': 'COMPUTE_API_CLASS_UNSPECIFIED', '2': 0},
-    const {'1': 'COMPUTE_API_CLASS_CPU', '2': 1},
-    const {'1': 'COMPUTE_API_CLASS_CUDA', '2': 2},
-    const {'1': 'COMPUTE_API_CLASS_VULKAN', '2': 3},
-  ],
-};
-
-/// Descriptor for `ComputeApiClass`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List computeApiClassDescriptor = $convert.base64Decode('Cg9Db21wdXRlQXBpQ2xhc3MSIQodQ09NUFVURV9BUElfQ0xBU1NfVU5TUEVDSUZJRUQQABIZChVDT01QVVRFX0FQSV9DTEFTU19DUFUQARIaChZDT01QVVRFX0FQSV9DTEFTU19DVURBEAISHAoYQ09NUFVURV9BUElfQ0xBU1NfVlVMS0FOEAM=');
 @$core.Deprecated('Use isSmeshingResponseDescriptor instead')
 const IsSmeshingResponse$json = const {
   '1': 'IsSmeshingResponse',
@@ -36,13 +23,12 @@ const StartSmeshingRequest$json = const {
   '1': 'StartSmeshingRequest',
   '2': const [
     const {'1': 'coinbase', '3': 1, '4': 1, '5': 11, '6': '.spacemesh.v1.AccountId', '10': 'coinbase'},
-    const {'1': 'data_dir', '3': 2, '4': 1, '5': 9, '10': 'dataDir'},
-    const {'1': 'commitment_size', '3': 3, '4': 1, '5': 11, '6': '.spacemesh.v1.SimpleInt', '10': 'commitmentSize'},
+    const {'1': 'opts', '3': 2, '4': 1, '5': 11, '6': '.spacemesh.v1.PostSetupOpts', '10': 'opts'},
   ],
 };
 
 /// Descriptor for `StartSmeshingRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List startSmeshingRequestDescriptor = $convert.base64Decode('ChRTdGFydFNtZXNoaW5nUmVxdWVzdBIzCghjb2luYmFzZRgBIAEoCzIXLnNwYWNlbWVzaC52MS5BY2NvdW50SWRSCGNvaW5iYXNlEhkKCGRhdGFfZGlyGAIgASgJUgdkYXRhRGlyEkAKD2NvbW1pdG1lbnRfc2l6ZRgDIAEoCzIXLnNwYWNlbWVzaC52MS5TaW1wbGVJbnRSDmNvbW1pdG1lbnRTaXpl');
+final $typed_data.Uint8List startSmeshingRequestDescriptor = $convert.base64Decode('ChRTdGFydFNtZXNoaW5nUmVxdWVzdBIzCghjb2luYmFzZRgBIAEoCzIXLnNwYWNlbWVzaC52MS5BY2NvdW50SWRSCGNvaW5iYXNlEi8KBG9wdHMYAiABKAsyGy5zcGFjZW1lc2gudjEuUG9zdFNldHVwT3B0c1IEb3B0cw==');
 @$core.Deprecated('Use startSmeshingResponseDescriptor instead')
 const StartSmeshingResponse$json = const {
   '1': 'StartSmeshingResponse',
@@ -53,6 +39,16 @@ const StartSmeshingResponse$json = const {
 
 /// Descriptor for `StartSmeshingResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List startSmeshingResponseDescriptor = $convert.base64Decode('ChVTdGFydFNtZXNoaW5nUmVzcG9uc2USKgoGc3RhdHVzGAEgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNSBnN0YXR1cw==');
+@$core.Deprecated('Use stopSmeshingRequestDescriptor instead')
+const StopSmeshingRequest$json = const {
+  '1': 'StopSmeshingRequest',
+  '2': const [
+    const {'1': 'delete_files', '3': 1, '4': 1, '5': 8, '10': 'deleteFiles'},
+  ],
+};
+
+/// Descriptor for `StopSmeshingRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List stopSmeshingRequestDescriptor = $convert.base64Decode('ChNTdG9wU21lc2hpbmdSZXF1ZXN0EiEKDGRlbGV0ZV9maWxlcxgBIAEoCFILZGVsZXRlRmlsZXM=');
 @$core.Deprecated('Use stopSmeshingResponseDescriptor instead')
 const StopSmeshingResponse$json = const {
   '1': 'StopSmeshingResponse',
@@ -113,26 +109,6 @@ const SetMinGasResponse$json = const {
 
 /// Descriptor for `SetMinGasResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List setMinGasResponseDescriptor = $convert.base64Decode('ChFTZXRNaW5HYXNSZXNwb25zZRIqCgZzdGF0dXMYASABKAsyEi5nb29nbGUucnBjLlN0YXR1c1IGc3RhdHVz');
-@$core.Deprecated('Use createPostDataResponseDescriptor instead')
-const CreatePostDataResponse$json = const {
-  '1': 'CreatePostDataResponse',
-  '2': const [
-    const {'1': 'status', '3': 1, '4': 1, '5': 11, '6': '.google.rpc.Status', '10': 'status'},
-  ],
-};
-
-/// Descriptor for `CreatePostDataResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List createPostDataResponseDescriptor = $convert.base64Decode('ChZDcmVhdGVQb3N0RGF0YVJlc3BvbnNlEioKBnN0YXR1cxgBIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzUgZzdGF0dXM=');
-@$core.Deprecated('Use stopPostDataCreationSessionResponseDescriptor instead')
-const StopPostDataCreationSessionResponse$json = const {
-  '1': 'StopPostDataCreationSessionResponse',
-  '2': const [
-    const {'1': 'status', '3': 1, '4': 1, '5': 11, '6': '.google.rpc.Status', '10': 'status'},
-  ],
-};
-
-/// Descriptor for `StopPostDataCreationSessionResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List stopPostDataCreationSessionResponseDescriptor = $convert.base64Decode('CiNTdG9wUG9zdERhdGFDcmVhdGlvblNlc3Npb25SZXNwb25zZRIqCgZzdGF0dXMYASABKAsyEi5nb29nbGUucnBjLlN0YXR1c1IGc3RhdHVz');
 @$core.Deprecated('Use smesherIDResponseDescriptor instead')
 const SmesherIDResponse$json = const {
   '1': 'SmesherIDResponse',
@@ -153,131 +129,6 @@ const CoinbaseResponse$json = const {
 
 /// Descriptor for `CoinbaseResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List coinbaseResponseDescriptor = $convert.base64Decode('ChBDb2luYmFzZVJlc3BvbnNlEjYKCmFjY291bnRfaWQYASABKAsyFy5zcGFjZW1lc2gudjEuQWNjb3VudElkUglhY2NvdW50SWQ=');
-@$core.Deprecated('Use postComputeProviderDescriptor instead')
-const PostComputeProvider$json = const {
-  '1': 'PostComputeProvider',
-  '2': const [
-    const {'1': 'id', '3': 1, '4': 1, '5': 13, '10': 'id'},
-    const {'1': 'model', '3': 2, '4': 1, '5': 9, '10': 'model'},
-    const {'1': 'compute_api', '3': 3, '4': 1, '5': 14, '6': '.spacemesh.v1.ComputeApiClass', '10': 'computeApi'},
-    const {'1': 'performance', '3': 4, '4': 1, '5': 4, '10': 'performance'},
-  ],
-};
-
-/// Descriptor for `PostComputeProvider`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List postComputeProviderDescriptor = $convert.base64Decode('ChNQb3N0Q29tcHV0ZVByb3ZpZGVyEg4KAmlkGAEgASgNUgJpZBIUCgVtb2RlbBgCIAEoCVIFbW9kZWwSPgoLY29tcHV0ZV9hcGkYAyABKA4yHS5zcGFjZW1lc2gudjEuQ29tcHV0ZUFwaUNsYXNzUgpjb21wdXRlQXBpEiAKC3BlcmZvcm1hbmNlGAQgASgEUgtwZXJmb3JtYW5jZQ==');
-@$core.Deprecated('Use postComputeProvidersResponseDescriptor instead')
-const PostComputeProvidersResponse$json = const {
-  '1': 'PostComputeProvidersResponse',
-  '2': const [
-    const {'1': 'post_compute_provider', '3': 1, '4': 3, '5': 11, '6': '.spacemesh.v1.PostComputeProvider', '10': 'postComputeProvider'},
-  ],
-};
-
-/// Descriptor for `PostComputeProvidersResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List postComputeProvidersResponseDescriptor = $convert.base64Decode('ChxQb3N0Q29tcHV0ZVByb3ZpZGVyc1Jlc3BvbnNlElUKFXBvc3RfY29tcHV0ZV9wcm92aWRlchgBIAMoCzIhLnNwYWNlbWVzaC52MS5Qb3N0Q29tcHV0ZVByb3ZpZGVyUhNwb3N0Q29tcHV0ZVByb3ZpZGVy');
-@$core.Deprecated('Use postDataDescriptor instead')
-const PostData$json = const {
-  '1': 'PostData',
-  '2': const [
-    const {'1': 'path', '3': 1, '4': 1, '5': 9, '10': 'path'},
-    const {'1': 'data_size', '3': 2, '4': 1, '5': 4, '10': 'dataSize'},
-    const {'1': 'append', '3': 3, '4': 1, '5': 8, '10': 'append'},
-    const {'1': 'throttle', '3': 4, '4': 1, '5': 8, '10': 'throttle'},
-    const {'1': 'provider_id', '3': 5, '4': 1, '5': 13, '10': 'providerId'},
-  ],
-};
-
-/// Descriptor for `PostData`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List postDataDescriptor = $convert.base64Decode('CghQb3N0RGF0YRISCgRwYXRoGAEgASgJUgRwYXRoEhsKCWRhdGFfc2l6ZRgCIAEoBFIIZGF0YVNpemUSFgoGYXBwZW5kGAMgASgIUgZhcHBlbmQSGgoIdGhyb3R0bGUYBCABKAhSCHRocm90dGxlEh8KC3Byb3ZpZGVyX2lkGAUgASgNUgpwcm92aWRlcklk');
-@$core.Deprecated('Use createPostDataRequestDescriptor instead')
-const CreatePostDataRequest$json = const {
-  '1': 'CreatePostDataRequest',
-  '2': const [
-    const {'1': 'data', '3': 1, '4': 1, '5': 11, '6': '.spacemesh.v1.PostData', '10': 'data'},
-  ],
-};
-
-/// Descriptor for `CreatePostDataRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List createPostDataRequestDescriptor = $convert.base64Decode('ChVDcmVhdGVQb3N0RGF0YVJlcXVlc3QSKgoEZGF0YRgBIAEoCzIWLnNwYWNlbWVzaC52MS5Qb3N0RGF0YVIEZGF0YQ==');
-@$core.Deprecated('Use stopSmeshingRequestDescriptor instead')
-const StopSmeshingRequest$json = const {
-  '1': 'StopSmeshingRequest',
-  '2': const [
-    const {'1': 'delete_files', '3': 1, '4': 1, '5': 8, '10': 'deleteFiles'},
-  ],
-};
-
-/// Descriptor for `StopSmeshingRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List stopSmeshingRequestDescriptor = $convert.base64Decode('ChNTdG9wU21lc2hpbmdSZXF1ZXN0EiEKDGRlbGV0ZV9maWxlcxgBIAEoCFILZGVsZXRlRmlsZXM=');
-@$core.Deprecated('Use stopPostDataCreationSessionRequestDescriptor instead')
-const StopPostDataCreationSessionRequest$json = const {
-  '1': 'StopPostDataCreationSessionRequest',
-  '2': const [
-    const {'1': 'delete_files', '3': 1, '4': 1, '5': 8, '10': 'deleteFiles'},
-  ],
-};
-
-/// Descriptor for `StopPostDataCreationSessionRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List stopPostDataCreationSessionRequestDescriptor = $convert.base64Decode('CiJTdG9wUG9zdERhdGFDcmVhdGlvblNlc3Npb25SZXF1ZXN0EiEKDGRlbGV0ZV9maWxlcxgBIAEoCFILZGVsZXRlRmlsZXM=');
-@$core.Deprecated('Use postStatusDescriptor instead')
-const PostStatus$json = const {
-  '1': 'PostStatus',
-  '2': const [
-    const {'1': 'post_data', '3': 1, '4': 1, '5': 11, '6': '.spacemesh.v1.PostData', '10': 'postData'},
-    const {'1': 'files_status', '3': 2, '4': 1, '5': 14, '6': '.spacemesh.v1.PostStatus.FilesStatus', '10': 'filesStatus'},
-    const {'1': 'init_in_progress', '3': 3, '4': 1, '5': 8, '10': 'initInProgress'},
-    const {'1': 'bytes_written', '3': 4, '4': 1, '5': 4, '10': 'bytesWritten'},
-    const {'1': 'error_message', '3': 5, '4': 1, '5': 9, '10': 'errorMessage'},
-    const {'1': 'error_type', '3': 6, '4': 1, '5': 14, '6': '.spacemesh.v1.PostStatus.ErrorType', '10': 'errorType'},
-  ],
-  '4': const [PostStatus_FilesStatus$json, PostStatus_ErrorType$json],
-};
-
-@$core.Deprecated('Use postStatusDescriptor instead')
-const PostStatus_FilesStatus$json = const {
-  '1': 'FilesStatus',
-  '2': const [
-    const {'1': 'FILES_STATUS_UNSPECIFIED', '2': 0},
-    const {'1': 'FILES_STATUS_NOT_FOUND', '2': 1},
-    const {'1': 'FILES_STATUS_PARTIAL', '2': 2},
-    const {'1': 'FILES_STATUS_COMPLETE', '2': 3},
-  ],
-};
-
-@$core.Deprecated('Use postStatusDescriptor instead')
-const PostStatus_ErrorType$json = const {
-  '1': 'ErrorType',
-  '2': const [
-    const {'1': 'ERROR_TYPE_UNSPECIFIED', '2': 0},
-    const {'1': 'ERROR_TYPE_FILE_NOT_FOUND', '2': 1},
-    const {'1': 'ERROR_TYPE_READ_ERROR', '2': 2},
-    const {'1': 'ERROR_TYPE_WRITE_ERROR', '2': 3},
-  ],
-};
-
-/// Descriptor for `PostStatus`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List postStatusDescriptor = $convert.base64Decode('CgpQb3N0U3RhdHVzEjMKCXBvc3RfZGF0YRgBIAEoCzIWLnNwYWNlbWVzaC52MS5Qb3N0RGF0YVIIcG9zdERhdGESRwoMZmlsZXNfc3RhdHVzGAIgASgOMiQuc3BhY2VtZXNoLnYxLlBvc3RTdGF0dXMuRmlsZXNTdGF0dXNSC2ZpbGVzU3RhdHVzEigKEGluaXRfaW5fcHJvZ3Jlc3MYAyABKAhSDmluaXRJblByb2dyZXNzEiMKDWJ5dGVzX3dyaXR0ZW4YBCABKARSDGJ5dGVzV3JpdHRlbhIjCg1lcnJvcl9tZXNzYWdlGAUgASgJUgxlcnJvck1lc3NhZ2USQQoKZXJyb3JfdHlwZRgGIAEoDjIiLnNwYWNlbWVzaC52MS5Qb3N0U3RhdHVzLkVycm9yVHlwZVIJZXJyb3JUeXBlInwKC0ZpbGVzU3RhdHVzEhwKGEZJTEVTX1NUQVRVU19VTlNQRUNJRklFRBAAEhoKFkZJTEVTX1NUQVRVU19OT1RfRk9VTkQQARIYChRGSUxFU19TVEFUVVNfUEFSVElBTBACEhkKFUZJTEVTX1NUQVRVU19DT01QTEVURRADIn0KCUVycm9yVHlwZRIaChZFUlJPUl9UWVBFX1VOU1BFQ0lGSUVEEAASHQoZRVJST1JfVFlQRV9GSUxFX05PVF9GT1VORBABEhkKFUVSUk9SX1RZUEVfUkVBRF9FUlJPUhACEhoKFkVSUk9SX1RZUEVfV1JJVEVfRVJST1IQAw==');
-@$core.Deprecated('Use postStatusResponseDescriptor instead')
-const PostStatusResponse$json = const {
-  '1': 'PostStatusResponse',
-  '2': const [
-    const {'1': 'status', '3': 1, '4': 1, '5': 11, '6': '.spacemesh.v1.PostStatus', '10': 'status'},
-  ],
-};
-
-/// Descriptor for `PostStatusResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List postStatusResponseDescriptor = $convert.base64Decode('ChJQb3N0U3RhdHVzUmVzcG9uc2USMAoGc3RhdHVzGAEgASgLMhguc3BhY2VtZXNoLnYxLlBvc3RTdGF0dXNSBnN0YXR1cw==');
-@$core.Deprecated('Use postDataCreationProgressStreamResponseDescriptor instead')
-const PostDataCreationProgressStreamResponse$json = const {
-  '1': 'PostDataCreationProgressStreamResponse',
-  '2': const [
-    const {'1': 'status', '3': 1, '4': 1, '5': 11, '6': '.spacemesh.v1.PostStatus', '10': 'status'},
-  ],
-};
-
-/// Descriptor for `PostDataCreationProgressStreamResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List postDataCreationProgressStreamResponseDescriptor = $convert.base64Decode('CiZQb3N0RGF0YUNyZWF0aW9uUHJvZ3Jlc3NTdHJlYW1SZXNwb25zZRIwCgZzdGF0dXMYASABKAsyGC5zcGFjZW1lc2gudjEuUG9zdFN0YXR1c1IGc3RhdHVz');
 @$core.Deprecated('Use estimatedRewardsRequestDescriptor instead')
 const EstimatedRewardsRequest$json = const {
   '1': 'EstimatedRewardsRequest',
@@ -290,9 +141,127 @@ const EstimatedRewardsResponse$json = const {
   '1': 'EstimatedRewardsResponse',
   '2': const [
     const {'1': 'amount', '3': 1, '4': 1, '5': 11, '6': '.spacemesh.v1.Amount', '10': 'amount'},
-    const {'1': 'data_size', '3': 2, '4': 1, '5': 4, '10': 'dataSize'},
+    const {'1': 'num_units', '3': 2, '4': 1, '5': 13, '10': 'numUnits'},
   ],
 };
 
 /// Descriptor for `EstimatedRewardsResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List estimatedRewardsResponseDescriptor = $convert.base64Decode('ChhFc3RpbWF0ZWRSZXdhcmRzUmVzcG9uc2USLAoGYW1vdW50GAEgASgLMhQuc3BhY2VtZXNoLnYxLkFtb3VudFIGYW1vdW50EhsKCWRhdGFfc2l6ZRgCIAEoBFIIZGF0YVNpemU=');
+final $typed_data.Uint8List estimatedRewardsResponseDescriptor = $convert.base64Decode('ChhFc3RpbWF0ZWRSZXdhcmRzUmVzcG9uc2USLAoGYW1vdW50GAEgASgLMhQuc3BhY2VtZXNoLnYxLkFtb3VudFIGYW1vdW50EhsKCW51bV91bml0cxgCIAEoDVIIbnVtVW5pdHM=');
+@$core.Deprecated('Use postSetupComputeProvidersRequestDescriptor instead')
+const PostSetupComputeProvidersRequest$json = const {
+  '1': 'PostSetupComputeProvidersRequest',
+  '2': const [
+    const {'1': 'benchmark', '3': 1, '4': 1, '5': 8, '10': 'benchmark'},
+  ],
+};
+
+/// Descriptor for `PostSetupComputeProvidersRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List postSetupComputeProvidersRequestDescriptor = $convert.base64Decode('CiBQb3N0U2V0dXBDb21wdXRlUHJvdmlkZXJzUmVxdWVzdBIcCgliZW5jaG1hcmsYASABKAhSCWJlbmNobWFyaw==');
+@$core.Deprecated('Use postSetupComputeProvidersResponseDescriptor instead')
+const PostSetupComputeProvidersResponse$json = const {
+  '1': 'PostSetupComputeProvidersResponse',
+  '2': const [
+    const {'1': 'providers', '3': 1, '4': 3, '5': 11, '6': '.spacemesh.v1.PostSetupComputeProvider', '10': 'providers'},
+  ],
+};
+
+/// Descriptor for `PostSetupComputeProvidersResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List postSetupComputeProvidersResponseDescriptor = $convert.base64Decode('CiFQb3N0U2V0dXBDb21wdXRlUHJvdmlkZXJzUmVzcG9uc2USRAoJcHJvdmlkZXJzGAEgAygLMiYuc3BhY2VtZXNoLnYxLlBvc3RTZXR1cENvbXB1dGVQcm92aWRlclIJcHJvdmlkZXJz');
+@$core.Deprecated('Use postSetupStatusResponseDescriptor instead')
+const PostSetupStatusResponse$json = const {
+  '1': 'PostSetupStatusResponse',
+  '2': const [
+    const {'1': 'status', '3': 1, '4': 1, '5': 11, '6': '.spacemesh.v1.PostSetupStatus', '10': 'status'},
+  ],
+};
+
+/// Descriptor for `PostSetupStatusResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List postSetupStatusResponseDescriptor = $convert.base64Decode('ChdQb3N0U2V0dXBTdGF0dXNSZXNwb25zZRI1CgZzdGF0dXMYASABKAsyHS5zcGFjZW1lc2gudjEuUG9zdFNldHVwU3RhdHVzUgZzdGF0dXM=');
+@$core.Deprecated('Use postSetupStatusStreamResponseDescriptor instead')
+const PostSetupStatusStreamResponse$json = const {
+  '1': 'PostSetupStatusStreamResponse',
+  '2': const [
+    const {'1': 'status', '3': 1, '4': 1, '5': 11, '6': '.spacemesh.v1.PostSetupStatus', '10': 'status'},
+  ],
+};
+
+/// Descriptor for `PostSetupStatusStreamResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List postSetupStatusStreamResponseDescriptor = $convert.base64Decode('Ch1Qb3N0U2V0dXBTdGF0dXNTdHJlYW1SZXNwb25zZRI1CgZzdGF0dXMYASABKAsyHS5zcGFjZW1lc2gudjEuUG9zdFNldHVwU3RhdHVzUgZzdGF0dXM=');
+@$core.Deprecated('Use postConfigResponseDescriptor instead')
+const PostConfigResponse$json = const {
+  '1': 'PostConfigResponse',
+  '2': const [
+    const {'1': 'bits_per_label', '3': 1, '4': 1, '5': 13, '10': 'bitsPerLabel'},
+    const {'1': 'labels_per_unit', '3': 2, '4': 1, '5': 4, '10': 'labelsPerUnit'},
+    const {'1': 'min_num_units', '3': 3, '4': 1, '5': 13, '10': 'minNumUnits'},
+    const {'1': 'max_num_units', '3': 4, '4': 1, '5': 13, '10': 'maxNumUnits'},
+  ],
+};
+
+/// Descriptor for `PostConfigResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List postConfigResponseDescriptor = $convert.base64Decode('ChJQb3N0Q29uZmlnUmVzcG9uc2USJAoOYml0c19wZXJfbGFiZWwYASABKA1SDGJpdHNQZXJMYWJlbBImCg9sYWJlbHNfcGVyX3VuaXQYAiABKARSDWxhYmVsc1BlclVuaXQSIgoNbWluX251bV91bml0cxgDIAEoDVILbWluTnVtVW5pdHMSIgoNbWF4X251bV91bml0cxgEIAEoDVILbWF4TnVtVW5pdHM=');
+@$core.Deprecated('Use postSetupComputeProviderDescriptor instead')
+const PostSetupComputeProvider$json = const {
+  '1': 'PostSetupComputeProvider',
+  '2': const [
+    const {'1': 'id', '3': 1, '4': 1, '5': 13, '10': 'id'},
+    const {'1': 'model', '3': 2, '4': 1, '5': 9, '10': 'model'},
+    const {'1': 'compute_api', '3': 3, '4': 1, '5': 14, '6': '.spacemesh.v1.PostSetupComputeProvider.ComputeApiClass', '10': 'computeApi'},
+    const {'1': 'performance', '3': 4, '4': 1, '5': 4, '10': 'performance'},
+  ],
+  '4': const [PostSetupComputeProvider_ComputeApiClass$json],
+};
+
+@$core.Deprecated('Use postSetupComputeProviderDescriptor instead')
+const PostSetupComputeProvider_ComputeApiClass$json = const {
+  '1': 'ComputeApiClass',
+  '2': const [
+    const {'1': 'COMPUTE_API_CLASS_UNSPECIFIED', '2': 0},
+    const {'1': 'COMPUTE_API_CLASS_CPU', '2': 1},
+    const {'1': 'COMPUTE_API_CLASS_CUDA', '2': 2},
+    const {'1': 'COMPUTE_API_CLASS_VULKAN', '2': 3},
+  ],
+};
+
+/// Descriptor for `PostSetupComputeProvider`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List postSetupComputeProviderDescriptor = $convert.base64Decode('ChhQb3N0U2V0dXBDb21wdXRlUHJvdmlkZXISDgoCaWQYASABKA1SAmlkEhQKBW1vZGVsGAIgASgJUgVtb2RlbBJXCgtjb21wdXRlX2FwaRgDIAEoDjI2LnNwYWNlbWVzaC52MS5Qb3N0U2V0dXBDb21wdXRlUHJvdmlkZXIuQ29tcHV0ZUFwaUNsYXNzUgpjb21wdXRlQXBpEiAKC3BlcmZvcm1hbmNlGAQgASgEUgtwZXJmb3JtYW5jZSKJAQoPQ29tcHV0ZUFwaUNsYXNzEiEKHUNPTVBVVEVfQVBJX0NMQVNTX1VOU1BFQ0lGSUVEEAASGQoVQ09NUFVURV9BUElfQ0xBU1NfQ1BVEAESGgoWQ09NUFVURV9BUElfQ0xBU1NfQ1VEQRACEhwKGENPTVBVVEVfQVBJX0NMQVNTX1ZVTEtBThAD');
+@$core.Deprecated('Use postSetupOptsDescriptor instead')
+const PostSetupOpts$json = const {
+  '1': 'PostSetupOpts',
+  '2': const [
+    const {'1': 'data_dir', '3': 1, '4': 1, '5': 9, '10': 'dataDir'},
+    const {'1': 'num_units', '3': 2, '4': 1, '5': 13, '10': 'numUnits'},
+    const {'1': 'num_files', '3': 3, '4': 1, '5': 13, '10': 'numFiles'},
+    const {'1': 'compute_provider_id', '3': 4, '4': 1, '5': 13, '10': 'computeProviderId'},
+    const {'1': 'throttle', '3': 5, '4': 1, '5': 8, '10': 'throttle'},
+  ],
+};
+
+/// Descriptor for `PostSetupOpts`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List postSetupOptsDescriptor = $convert.base64Decode('Cg1Qb3N0U2V0dXBPcHRzEhkKCGRhdGFfZGlyGAEgASgJUgdkYXRhRGlyEhsKCW51bV91bml0cxgCIAEoDVIIbnVtVW5pdHMSGwoJbnVtX2ZpbGVzGAMgASgNUghudW1GaWxlcxIuChNjb21wdXRlX3Byb3ZpZGVyX2lkGAQgASgNUhFjb21wdXRlUHJvdmlkZXJJZBIaCgh0aHJvdHRsZRgFIAEoCFIIdGhyb3R0bGU=');
+@$core.Deprecated('Use postSetupStatusDescriptor instead')
+const PostSetupStatus$json = const {
+  '1': 'PostSetupStatus',
+  '2': const [
+    const {'1': 'state', '3': 1, '4': 1, '5': 14, '6': '.spacemesh.v1.PostSetupStatus.State', '10': 'state'},
+    const {'1': 'num_labels_written', '3': 2, '4': 1, '5': 4, '10': 'numLabelsWritten'},
+    const {'1': 'opts', '3': 3, '4': 1, '5': 11, '6': '.spacemesh.v1.PostSetupOpts', '10': 'opts'},
+    const {'1': 'error_message', '3': 4, '4': 1, '5': 9, '10': 'errorMessage'},
+  ],
+  '4': const [PostSetupStatus_State$json],
+};
+
+@$core.Deprecated('Use postSetupStatusDescriptor instead')
+const PostSetupStatus_State$json = const {
+  '1': 'State',
+  '2': const [
+    const {'1': 'STATE_UNSPECIFIED', '2': 0},
+    const {'1': 'STATE_NOT_STARTED', '2': 1},
+    const {'1': 'STATE_IN_PROGRESS', '2': 2},
+    const {'1': 'STATE_COMPLETE', '2': 3},
+    const {'1': 'STATE_ERROR', '2': 4},
+  ],
+};
+
+/// Descriptor for `PostSetupStatus`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List postSetupStatusDescriptor = $convert.base64Decode('Cg9Qb3N0U2V0dXBTdGF0dXMSOQoFc3RhdGUYASABKA4yIy5zcGFjZW1lc2gudjEuUG9zdFNldHVwU3RhdHVzLlN0YXRlUgVzdGF0ZRIsChJudW1fbGFiZWxzX3dyaXR0ZW4YAiABKARSEG51bUxhYmVsc1dyaXR0ZW4SLwoEb3B0cxgDIAEoCzIbLnNwYWNlbWVzaC52MS5Qb3N0U2V0dXBPcHRzUgRvcHRzEiMKDWVycm9yX21lc3NhZ2UYBCABKAlSDGVycm9yTWVzc2FnZSJxCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEhUKEVNUQVRFX05PVF9TVEFSVEVEEAESFQoRU1RBVEVfSU5fUFJPR1JFU1MQAhISCg5TVEFURV9DT01QTEVURRADEg8KC1NUQVRFX0VSUk9SEAQ=');

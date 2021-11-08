@@ -130,6 +130,26 @@ const StatusResponse$json = const {
 
 /// Descriptor for `StatusResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List statusResponseDescriptor = $convert.base64Decode('Cg5TdGF0dXNSZXNwb25zZRIwCgZzdGF0dXMYASABKAsyGC5zcGFjZW1lc2gudjEuTm9kZVN0YXR1c1IGc3RhdHVz');
+@$core.Deprecated('Use updatePoetServerRequestDescriptor instead')
+const UpdatePoetServerRequest$json = const {
+  '1': 'UpdatePoetServerRequest',
+  '2': const [
+    const {'1': 'url', '3': 1, '4': 1, '5': 9, '10': 'url'},
+  ],
+};
+
+/// Descriptor for `UpdatePoetServerRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updatePoetServerRequestDescriptor = $convert.base64Decode('ChdVcGRhdGVQb2V0U2VydmVyUmVxdWVzdBIQCgN1cmwYASABKAlSA3VybA==');
+@$core.Deprecated('Use updatePoetServerResponseDescriptor instead')
+const UpdatePoetServerResponse$json = const {
+  '1': 'UpdatePoetServerResponse',
+  '2': const [
+    const {'1': 'status', '3': 1, '4': 1, '5': 11, '6': '.google.rpc.Status', '10': 'status'},
+  ],
+};
+
+/// Descriptor for `UpdatePoetServerResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updatePoetServerResponseDescriptor = $convert.base64Decode('ChhVcGRhdGVQb2V0U2VydmVyUmVzcG9uc2USKgoGc3RhdHVzGAEgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNSBnN0YXR1cw==');
 @$core.Deprecated('Use statusStreamRequestDescriptor instead')
 const StatusStreamRequest$json = const {
   '1': 'StatusStreamRequest',

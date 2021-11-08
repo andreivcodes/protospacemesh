@@ -9,7 +9,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../google/rpc/status.pb.dart' as $9;
+import '../../google/rpc/status.pb.dart' as $3;
 
 class BroadcastPoetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BroadcastPoetRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
@@ -60,13 +60,13 @@ class BroadcastPoetRequest extends $pb.GeneratedMessage {
 
 class BroadcastPoetResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BroadcastPoetResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$9.Status>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: $9.Status.create)
+    ..aOM<$3.Status>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: $3.Status.create)
     ..hasRequiredFields = false
   ;
 
   BroadcastPoetResponse._() : super();
   factory BroadcastPoetResponse({
-    $9.Status? status,
+    $3.Status? status,
   }) {
     final _result = create();
     if (status != null) {
@@ -96,14 +96,14 @@ class BroadcastPoetResponse extends $pb.GeneratedMessage {
   static BroadcastPoetResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $9.Status get status => $_getN(0);
+  $3.Status get status => $_getN(0);
   @$pb.TagNumber(1)
-  set status($9.Status v) { setField(1, v); }
+  set status($3.Status v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStatus() => $_has(0);
   @$pb.TagNumber(1)
   void clearStatus() => clearField(1);
   @$pb.TagNumber(1)
-  $9.Status ensureStatus() => $_ensure(0);
+  $3.Status ensureStatus() => $_ensure(0);
 }
 

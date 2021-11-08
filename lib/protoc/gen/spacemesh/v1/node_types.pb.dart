@@ -10,8 +10,8 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'types.pb.dart' as $8;
-import '../../google/rpc/status.pb.dart' as $9;
+import 'types.pb.dart' as $0;
+import '../../google/rpc/status.pb.dart' as $3;
 
 import 'node_types.pbenum.dart';
 
@@ -19,13 +19,13 @@ export 'node_types.pbenum.dart';
 
 class EchoRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'EchoRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$8.SimpleString>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'msg', subBuilder: $8.SimpleString.create)
+    ..aOM<$0.SimpleString>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'msg', subBuilder: $0.SimpleString.create)
     ..hasRequiredFields = false
   ;
 
   EchoRequest._() : super();
   factory EchoRequest({
-    $8.SimpleString? msg,
+    $0.SimpleString? msg,
   }) {
     final _result = create();
     if (msg != null) {
@@ -55,26 +55,26 @@ class EchoRequest extends $pb.GeneratedMessage {
   static EchoRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $8.SimpleString get msg => $_getN(0);
+  $0.SimpleString get msg => $_getN(0);
   @$pb.TagNumber(1)
-  set msg($8.SimpleString v) { setField(1, v); }
+  set msg($0.SimpleString v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMsg() => $_has(0);
   @$pb.TagNumber(1)
   void clearMsg() => clearField(1);
   @$pb.TagNumber(1)
-  $8.SimpleString ensureMsg() => $_ensure(0);
+  $0.SimpleString ensureMsg() => $_ensure(0);
 }
 
 class EchoResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'EchoResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$8.SimpleString>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'msg', subBuilder: $8.SimpleString.create)
+    ..aOM<$0.SimpleString>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'msg', subBuilder: $0.SimpleString.create)
     ..hasRequiredFields = false
   ;
 
   EchoResponse._() : super();
   factory EchoResponse({
-    $8.SimpleString? msg,
+    $0.SimpleString? msg,
   }) {
     final _result = create();
     if (msg != null) {
@@ -104,26 +104,26 @@ class EchoResponse extends $pb.GeneratedMessage {
   static EchoResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $8.SimpleString get msg => $_getN(0);
+  $0.SimpleString get msg => $_getN(0);
   @$pb.TagNumber(1)
-  set msg($8.SimpleString v) { setField(1, v); }
+  set msg($0.SimpleString v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMsg() => $_has(0);
   @$pb.TagNumber(1)
   void clearMsg() => clearField(1);
   @$pb.TagNumber(1)
-  $8.SimpleString ensureMsg() => $_ensure(0);
+  $0.SimpleString ensureMsg() => $_ensure(0);
 }
 
 class VersionResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'VersionResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$8.SimpleString>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'versionString', subBuilder: $8.SimpleString.create)
+    ..aOM<$0.SimpleString>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'versionString', subBuilder: $0.SimpleString.create)
     ..hasRequiredFields = false
   ;
 
   VersionResponse._() : super();
   factory VersionResponse({
-    $8.SimpleString? versionString,
+    $0.SimpleString? versionString,
   }) {
     final _result = create();
     if (versionString != null) {
@@ -153,26 +153,26 @@ class VersionResponse extends $pb.GeneratedMessage {
   static VersionResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $8.SimpleString get versionString => $_getN(0);
+  $0.SimpleString get versionString => $_getN(0);
   @$pb.TagNumber(1)
-  set versionString($8.SimpleString v) { setField(1, v); }
+  set versionString($0.SimpleString v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasVersionString() => $_has(0);
   @$pb.TagNumber(1)
   void clearVersionString() => clearField(1);
   @$pb.TagNumber(1)
-  $8.SimpleString ensureVersionString() => $_ensure(0);
+  $0.SimpleString ensureVersionString() => $_ensure(0);
 }
 
 class BuildResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BuildResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$8.SimpleString>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'buildString', subBuilder: $8.SimpleString.create)
+    ..aOM<$0.SimpleString>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'buildString', subBuilder: $0.SimpleString.create)
     ..hasRequiredFields = false
   ;
 
   BuildResponse._() : super();
   factory BuildResponse({
-    $8.SimpleString? buildString,
+    $0.SimpleString? buildString,
   }) {
     final _result = create();
     if (buildString != null) {
@@ -202,15 +202,15 @@ class BuildResponse extends $pb.GeneratedMessage {
   static BuildResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $8.SimpleString get buildString => $_getN(0);
+  $0.SimpleString get buildString => $_getN(0);
   @$pb.TagNumber(1)
-  set buildString($8.SimpleString v) { setField(1, v); }
+  set buildString($0.SimpleString v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasBuildString() => $_has(0);
   @$pb.TagNumber(1)
   void clearBuildString() => clearField(1);
   @$pb.TagNumber(1)
-  $8.SimpleString ensureBuildString() => $_ensure(0);
+  $0.SimpleString ensureBuildString() => $_ensure(0);
 }
 
 class SyncStartRequest extends $pb.GeneratedMessage {
@@ -244,13 +244,13 @@ class SyncStartRequest extends $pb.GeneratedMessage {
 
 class SyncStartResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SyncStartResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$9.Status>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: $9.Status.create)
+    ..aOM<$3.Status>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: $3.Status.create)
     ..hasRequiredFields = false
   ;
 
   SyncStartResponse._() : super();
   factory SyncStartResponse({
-    $9.Status? status,
+    $3.Status? status,
   }) {
     final _result = create();
     if (status != null) {
@@ -280,15 +280,15 @@ class SyncStartResponse extends $pb.GeneratedMessage {
   static SyncStartResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $9.Status get status => $_getN(0);
+  $3.Status get status => $_getN(0);
   @$pb.TagNumber(1)
-  set status($9.Status v) { setField(1, v); }
+  set status($3.Status v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStatus() => $_has(0);
   @$pb.TagNumber(1)
   void clearStatus() => clearField(1);
   @$pb.TagNumber(1)
-  $9.Status ensureStatus() => $_ensure(0);
+  $3.Status ensureStatus() => $_ensure(0);
 }
 
 class ShutdownRequest extends $pb.GeneratedMessage {
@@ -322,13 +322,13 @@ class ShutdownRequest extends $pb.GeneratedMessage {
 
 class ShutdownResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ShutdownResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$9.Status>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: $9.Status.create)
+    ..aOM<$3.Status>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: $3.Status.create)
     ..hasRequiredFields = false
   ;
 
   ShutdownResponse._() : super();
   factory ShutdownResponse({
-    $9.Status? status,
+    $3.Status? status,
   }) {
     final _result = create();
     if (status != null) {
@@ -358,24 +358,24 @@ class ShutdownResponse extends $pb.GeneratedMessage {
   static ShutdownResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $9.Status get status => $_getN(0);
+  $3.Status get status => $_getN(0);
   @$pb.TagNumber(1)
-  set status($9.Status v) { setField(1, v); }
+  set status($3.Status v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStatus() => $_has(0);
   @$pb.TagNumber(1)
   void clearStatus() => clearField(1);
   @$pb.TagNumber(1)
-  $9.Status ensureStatus() => $_ensure(0);
+  $3.Status ensureStatus() => $_ensure(0);
 }
 
 class NodeStatus extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'NodeStatus', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'connectedPeers', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isSynced')
-    ..aOM<$8.LayerNumber>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'syncedLayer', subBuilder: $8.LayerNumber.create)
-    ..aOM<$8.LayerNumber>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'topLayer', subBuilder: $8.LayerNumber.create)
-    ..aOM<$8.LayerNumber>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'verifiedLayer', subBuilder: $8.LayerNumber.create)
+    ..aOM<$0.LayerNumber>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'syncedLayer', subBuilder: $0.LayerNumber.create)
+    ..aOM<$0.LayerNumber>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'topLayer', subBuilder: $0.LayerNumber.create)
+    ..aOM<$0.LayerNumber>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'verifiedLayer', subBuilder: $0.LayerNumber.create)
     ..hasRequiredFields = false
   ;
 
@@ -383,9 +383,9 @@ class NodeStatus extends $pb.GeneratedMessage {
   factory NodeStatus({
     $fixnum.Int64? connectedPeers,
     $core.bool? isSynced,
-    $8.LayerNumber? syncedLayer,
-    $8.LayerNumber? topLayer,
-    $8.LayerNumber? verifiedLayer,
+    $0.LayerNumber? syncedLayer,
+    $0.LayerNumber? topLayer,
+    $0.LayerNumber? verifiedLayer,
   }) {
     final _result = create();
     if (connectedPeers != null) {
@@ -445,37 +445,37 @@ class NodeStatus extends $pb.GeneratedMessage {
   void clearIsSynced() => clearField(2);
 
   @$pb.TagNumber(3)
-  $8.LayerNumber get syncedLayer => $_getN(2);
+  $0.LayerNumber get syncedLayer => $_getN(2);
   @$pb.TagNumber(3)
-  set syncedLayer($8.LayerNumber v) { setField(3, v); }
+  set syncedLayer($0.LayerNumber v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasSyncedLayer() => $_has(2);
   @$pb.TagNumber(3)
   void clearSyncedLayer() => clearField(3);
   @$pb.TagNumber(3)
-  $8.LayerNumber ensureSyncedLayer() => $_ensure(2);
+  $0.LayerNumber ensureSyncedLayer() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $8.LayerNumber get topLayer => $_getN(3);
+  $0.LayerNumber get topLayer => $_getN(3);
   @$pb.TagNumber(4)
-  set topLayer($8.LayerNumber v) { setField(4, v); }
+  set topLayer($0.LayerNumber v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasTopLayer() => $_has(3);
   @$pb.TagNumber(4)
   void clearTopLayer() => clearField(4);
   @$pb.TagNumber(4)
-  $8.LayerNumber ensureTopLayer() => $_ensure(3);
+  $0.LayerNumber ensureTopLayer() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $8.LayerNumber get verifiedLayer => $_getN(4);
+  $0.LayerNumber get verifiedLayer => $_getN(4);
   @$pb.TagNumber(5)
-  set verifiedLayer($8.LayerNumber v) { setField(5, v); }
+  set verifiedLayer($0.LayerNumber v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasVerifiedLayer() => $_has(4);
   @$pb.TagNumber(5)
   void clearVerifiedLayer() => clearField(5);
   @$pb.TagNumber(5)
-  $8.LayerNumber ensureVerifiedLayer() => $_ensure(4);
+  $0.LayerNumber ensureVerifiedLayer() => $_ensure(4);
 }
 
 class StatusRequest extends $pb.GeneratedMessage {
@@ -554,6 +554,102 @@ class StatusResponse extends $pb.GeneratedMessage {
   void clearStatus() => clearField(1);
   @$pb.TagNumber(1)
   NodeStatus ensureStatus() => $_ensure(0);
+}
+
+class UpdatePoetServerRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'UpdatePoetServerRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'url')
+    ..hasRequiredFields = false
+  ;
+
+  UpdatePoetServerRequest._() : super();
+  factory UpdatePoetServerRequest({
+    $core.String? url,
+  }) {
+    final _result = create();
+    if (url != null) {
+      _result.url = url;
+    }
+    return _result;
+  }
+  factory UpdatePoetServerRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UpdatePoetServerRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UpdatePoetServerRequest clone() => UpdatePoetServerRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UpdatePoetServerRequest copyWith(void Function(UpdatePoetServerRequest) updates) => super.copyWith((message) => updates(message as UpdatePoetServerRequest)) as UpdatePoetServerRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UpdatePoetServerRequest create() => UpdatePoetServerRequest._();
+  UpdatePoetServerRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdatePoetServerRequest> createRepeated() => $pb.PbList<UpdatePoetServerRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UpdatePoetServerRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdatePoetServerRequest>(create);
+  static UpdatePoetServerRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get url => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set url($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUrl() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUrl() => clearField(1);
+}
+
+class UpdatePoetServerResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'UpdatePoetServerResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
+    ..aOM<$3.Status>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: $3.Status.create)
+    ..hasRequiredFields = false
+  ;
+
+  UpdatePoetServerResponse._() : super();
+  factory UpdatePoetServerResponse({
+    $3.Status? status,
+  }) {
+    final _result = create();
+    if (status != null) {
+      _result.status = status;
+    }
+    return _result;
+  }
+  factory UpdatePoetServerResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UpdatePoetServerResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UpdatePoetServerResponse clone() => UpdatePoetServerResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UpdatePoetServerResponse copyWith(void Function(UpdatePoetServerResponse) updates) => super.copyWith((message) => updates(message as UpdatePoetServerResponse)) as UpdatePoetServerResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UpdatePoetServerResponse create() => UpdatePoetServerResponse._();
+  UpdatePoetServerResponse createEmptyInstance() => create();
+  static $pb.PbList<UpdatePoetServerResponse> createRepeated() => $pb.PbList<UpdatePoetServerResponse>();
+  @$core.pragma('dart2js:noInline')
+  static UpdatePoetServerResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdatePoetServerResponse>(create);
+  static UpdatePoetServerResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $3.Status get status => $_getN(0);
+  @$pb.TagNumber(1)
+  set status($3.Status v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasStatus() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStatus() => clearField(1);
+  @$pb.TagNumber(1)
+  $3.Status ensureStatus() => $_ensure(0);
 }
 
 class StatusStreamRequest extends $pb.GeneratedMessage {

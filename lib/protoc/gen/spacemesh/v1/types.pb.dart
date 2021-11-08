@@ -612,7 +612,7 @@ class Activation extends $pb.GeneratedMessage {
     ..aOM<SmesherId>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'smesherId', subBuilder: SmesherId.create)
     ..aOM<AccountId>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'coinbase', subBuilder: AccountId.create)
     ..aOM<ActivationId>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'prevAtx', subBuilder: ActivationId.create)
-    ..a<$fixnum.Int64>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'commitmentSize', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$core.int>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'numUnits', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
@@ -623,7 +623,7 @@ class Activation extends $pb.GeneratedMessage {
     SmesherId? smesherId,
     AccountId? coinbase,
     ActivationId? prevAtx,
-    $fixnum.Int64? commitmentSize,
+    $core.int? numUnits,
   }) {
     final _result = create();
     if (id != null) {
@@ -641,8 +641,8 @@ class Activation extends $pb.GeneratedMessage {
     if (prevAtx != null) {
       _result.prevAtx = prevAtx;
     }
-    if (commitmentSize != null) {
-      _result.commitmentSize = commitmentSize;
+    if (numUnits != null) {
+      _result.numUnits = numUnits;
     }
     return _result;
   }
@@ -723,13 +723,13 @@ class Activation extends $pb.GeneratedMessage {
   ActivationId ensurePrevAtx() => $_ensure(4);
 
   @$pb.TagNumber(6)
-  $fixnum.Int64 get commitmentSize => $_getI64(5);
+  $core.int get numUnits => $_getIZ(5);
   @$pb.TagNumber(6)
-  set commitmentSize($fixnum.Int64 v) { $_setInt64(5, v); }
+  set numUnits($core.int v) { $_setUnsignedInt32(5, v); }
   @$pb.TagNumber(6)
-  $core.bool hasCommitmentSize() => $_has(5);
+  $core.bool hasNumUnits() => $_has(5);
   @$pb.TagNumber(6)
-  void clearCommitmentSize() => clearField(6);
+  void clearNumUnits() => clearField(6);
 }
 
 enum Transaction_Datum {
@@ -906,6 +906,71 @@ class Transaction extends $pb.GeneratedMessage {
   Signature ensureSignature() => $_ensure(7);
 }
 
+class MeshTransaction extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MeshTransaction', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
+    ..aOM<Transaction>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transaction', subBuilder: Transaction.create)
+    ..aOM<LayerNumber>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'layerId', subBuilder: LayerNumber.create)
+    ..hasRequiredFields = false
+  ;
+
+  MeshTransaction._() : super();
+  factory MeshTransaction({
+    Transaction? transaction,
+    LayerNumber? layerId,
+  }) {
+    final _result = create();
+    if (transaction != null) {
+      _result.transaction = transaction;
+    }
+    if (layerId != null) {
+      _result.layerId = layerId;
+    }
+    return _result;
+  }
+  factory MeshTransaction.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory MeshTransaction.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  MeshTransaction clone() => MeshTransaction()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  MeshTransaction copyWith(void Function(MeshTransaction) updates) => super.copyWith((message) => updates(message as MeshTransaction)) as MeshTransaction; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static MeshTransaction create() => MeshTransaction._();
+  MeshTransaction createEmptyInstance() => create();
+  static $pb.PbList<MeshTransaction> createRepeated() => $pb.PbList<MeshTransaction>();
+  @$core.pragma('dart2js:noInline')
+  static MeshTransaction getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MeshTransaction>(create);
+  static MeshTransaction? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  Transaction get transaction => $_getN(0);
+  @$pb.TagNumber(1)
+  set transaction(Transaction v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasTransaction() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTransaction() => clearField(1);
+  @$pb.TagNumber(1)
+  Transaction ensureTransaction() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  LayerNumber get layerId => $_getN(1);
+  @$pb.TagNumber(2)
+  set layerId(LayerNumber v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasLayerId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLayerId() => clearField(2);
+  @$pb.TagNumber(2)
+  LayerNumber ensureLayerId() => $_ensure(1);
+}
+
 class Reward extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Reward', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
     ..aOM<LayerNumber>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'layer', subBuilder: LayerNumber.create)
@@ -1039,6 +1104,8 @@ class Block extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Block', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', $pb.PbFieldType.OY)
     ..pc<Transaction>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactions', $pb.PbFieldType.PM, subBuilder: Transaction.create)
+    ..aOM<ActivationId>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'activationId', subBuilder: ActivationId.create)
+    ..aOM<SmesherId>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'smesherId', subBuilder: SmesherId.create)
     ..hasRequiredFields = false
   ;
 
@@ -1046,6 +1113,8 @@ class Block extends $pb.GeneratedMessage {
   factory Block({
     $core.List<$core.int>? id,
     $core.Iterable<Transaction>? transactions,
+    ActivationId? activationId,
+    SmesherId? smesherId,
   }) {
     final _result = create();
     if (id != null) {
@@ -1053,6 +1122,12 @@ class Block extends $pb.GeneratedMessage {
     }
     if (transactions != null) {
       _result.transactions.addAll(transactions);
+    }
+    if (activationId != null) {
+      _result.activationId = activationId;
+    }
+    if (smesherId != null) {
+      _result.smesherId = smesherId;
     }
     return _result;
   }
@@ -1088,6 +1163,28 @@ class Block extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(2)
   $core.List<Transaction> get transactions => $_getList(1);
+
+  @$pb.TagNumber(3)
+  ActivationId get activationId => $_getN(2);
+  @$pb.TagNumber(3)
+  set activationId(ActivationId v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasActivationId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearActivationId() => clearField(3);
+  @$pb.TagNumber(3)
+  ActivationId ensureActivationId() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  SmesherId get smesherId => $_getN(3);
+  @$pb.TagNumber(4)
+  set smesherId(SmesherId v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasSmesherId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSmesherId() => clearField(4);
+  @$pb.TagNumber(4)
+  SmesherId ensureSmesherId() => $_ensure(3);
 }
 
 class Layer extends $pb.GeneratedMessage {

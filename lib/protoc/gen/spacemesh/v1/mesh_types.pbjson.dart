@@ -133,12 +133,12 @@ final $typed_data.Uint8List maxTransactionsPerSecondRequestDescriptor = $convert
 const MaxTransactionsPerSecondResponse$json = const {
   '1': 'MaxTransactionsPerSecondResponse',
   '2': const [
-    const {'1': 'maxtxpersecond', '3': 1, '4': 1, '5': 11, '6': '.spacemesh.v1.SimpleInt', '10': 'maxtxpersecond'},
+    const {'1': 'max_txs_per_second', '3': 1, '4': 1, '5': 11, '6': '.spacemesh.v1.SimpleInt', '10': 'maxTxsPerSecond'},
   ],
 };
 
 /// Descriptor for `MaxTransactionsPerSecondResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List maxTransactionsPerSecondResponseDescriptor = $convert.base64Decode('CiBNYXhUcmFuc2FjdGlvbnNQZXJTZWNvbmRSZXNwb25zZRI/Cg5tYXh0eHBlcnNlY29uZBgBIAEoCzIXLnNwYWNlbWVzaC52MS5TaW1wbGVJbnRSDm1heHR4cGVyc2Vjb25k');
+final $typed_data.Uint8List maxTransactionsPerSecondResponseDescriptor = $convert.base64Decode('CiBNYXhUcmFuc2FjdGlvbnNQZXJTZWNvbmRSZXNwb25zZRJEChJtYXhfdHhzX3Blcl9zZWNvbmQYASABKAsyFy5zcGFjZW1lc2gudjEuU2ltcGxlSW50Ug9tYXhUeHNQZXJTZWNvbmQ=');
 @$core.Deprecated('Use accountMeshDataFilterDescriptor instead')
 const AccountMeshDataFilter$json = const {
   '1': 'AccountMeshDataFilter',
@@ -154,7 +154,7 @@ final $typed_data.Uint8List accountMeshDataFilterDescriptor = $convert.base64Dec
 const AccountMeshData$json = const {
   '1': 'AccountMeshData',
   '2': const [
-    const {'1': 'transaction', '3': 1, '4': 1, '5': 11, '6': '.spacemesh.v1.Transaction', '9': 0, '10': 'transaction'},
+    const {'1': 'mesh_transaction', '3': 1, '4': 1, '5': 11, '6': '.spacemesh.v1.MeshTransaction', '9': 0, '10': 'meshTransaction'},
     const {'1': 'activation', '3': 2, '4': 1, '5': 11, '6': '.spacemesh.v1.Activation', '9': 0, '10': 'activation'},
   ],
   '8': const [
@@ -163,7 +163,7 @@ const AccountMeshData$json = const {
 };
 
 /// Descriptor for `AccountMeshData`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List accountMeshDataDescriptor = $convert.base64Decode('Cg9BY2NvdW50TWVzaERhdGESPQoLdHJhbnNhY3Rpb24YASABKAsyGS5zcGFjZW1lc2gudjEuVHJhbnNhY3Rpb25IAFILdHJhbnNhY3Rpb24SOgoKYWN0aXZhdGlvbhgCIAEoCzIYLnNwYWNlbWVzaC52MS5BY3RpdmF0aW9uSABSCmFjdGl2YXRpb25CBwoFZGF0dW0=');
+final $typed_data.Uint8List accountMeshDataDescriptor = $convert.base64Decode('Cg9BY2NvdW50TWVzaERhdGESSgoQbWVzaF90cmFuc2FjdGlvbhgBIAEoCzIdLnNwYWNlbWVzaC52MS5NZXNoVHJhbnNhY3Rpb25IAFIPbWVzaFRyYW5zYWN0aW9uEjoKCmFjdGl2YXRpb24YAiABKAsyGC5zcGFjZW1lc2gudjEuQWN0aXZhdGlvbkgAUgphY3RpdmF0aW9uQgcKBWRhdHVt');
 @$core.Deprecated('Use accountMeshDataStreamRequestDescriptor instead')
 const AccountMeshDataStreamRequest$json = const {
   '1': 'AccountMeshDataStreamRequest',

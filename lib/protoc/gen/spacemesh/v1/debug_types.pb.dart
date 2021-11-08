@@ -9,17 +9,17 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'global_state_types.pb.dart' as $3;
+import 'global_state_types.pb.dart' as $1;
 
 class AccountsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AccountsResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..pc<$3.Account>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountWrapper', $pb.PbFieldType.PM, subBuilder: $3.Account.create)
+    ..pc<$1.Account>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountWrapper', $pb.PbFieldType.PM, subBuilder: $1.Account.create)
     ..hasRequiredFields = false
   ;
 
   AccountsResponse._() : super();
   factory AccountsResponse({
-    $core.Iterable<$3.Account>? accountWrapper,
+    $core.Iterable<$1.Account>? accountWrapper,
   }) {
     final _result = create();
     if (accountWrapper != null) {
@@ -49,6 +49,6 @@ class AccountsResponse extends $pb.GeneratedMessage {
   static AccountsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$3.Account> get accountWrapper => $_getList(0);
+  $core.List<$1.Account> get accountWrapper => $_getList(0);
 }
 

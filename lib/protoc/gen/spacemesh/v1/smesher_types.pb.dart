@@ -10,8 +10,8 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'types.pb.dart' as $8;
-import '../../google/rpc/status.pb.dart' as $9;
+import 'types.pb.dart' as $0;
+import '../../google/rpc/status.pb.dart' as $3;
 
 import 'smesher_types.pbenum.dart';
 
@@ -66,27 +66,22 @@ class IsSmeshingResponse extends $pb.GeneratedMessage {
 
 class StartSmeshingRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'StartSmeshingRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$8.AccountId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'coinbase', subBuilder: $8.AccountId.create)
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'dataDir')
-    ..aOM<$8.SimpleInt>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'commitmentSize', subBuilder: $8.SimpleInt.create)
+    ..aOM<$0.AccountId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'coinbase', subBuilder: $0.AccountId.create)
+    ..aOM<PostSetupOpts>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'opts', subBuilder: PostSetupOpts.create)
     ..hasRequiredFields = false
   ;
 
   StartSmeshingRequest._() : super();
   factory StartSmeshingRequest({
-    $8.AccountId? coinbase,
-    $core.String? dataDir,
-    $8.SimpleInt? commitmentSize,
+    $0.AccountId? coinbase,
+    PostSetupOpts? opts,
   }) {
     final _result = create();
     if (coinbase != null) {
       _result.coinbase = coinbase;
     }
-    if (dataDir != null) {
-      _result.dataDir = dataDir;
-    }
-    if (commitmentSize != null) {
-      _result.commitmentSize = commitmentSize;
+    if (opts != null) {
+      _result.opts = opts;
     }
     return _result;
   }
@@ -112,46 +107,37 @@ class StartSmeshingRequest extends $pb.GeneratedMessage {
   static StartSmeshingRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $8.AccountId get coinbase => $_getN(0);
+  $0.AccountId get coinbase => $_getN(0);
   @$pb.TagNumber(1)
-  set coinbase($8.AccountId v) { setField(1, v); }
+  set coinbase($0.AccountId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasCoinbase() => $_has(0);
   @$pb.TagNumber(1)
   void clearCoinbase() => clearField(1);
   @$pb.TagNumber(1)
-  $8.AccountId ensureCoinbase() => $_ensure(0);
+  $0.AccountId ensureCoinbase() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $core.String get dataDir => $_getSZ(1);
+  PostSetupOpts get opts => $_getN(1);
   @$pb.TagNumber(2)
-  set dataDir($core.String v) { $_setString(1, v); }
+  set opts(PostSetupOpts v) { setField(2, v); }
   @$pb.TagNumber(2)
-  $core.bool hasDataDir() => $_has(1);
+  $core.bool hasOpts() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDataDir() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $8.SimpleInt get commitmentSize => $_getN(2);
-  @$pb.TagNumber(3)
-  set commitmentSize($8.SimpleInt v) { setField(3, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasCommitmentSize() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearCommitmentSize() => clearField(3);
-  @$pb.TagNumber(3)
-  $8.SimpleInt ensureCommitmentSize() => $_ensure(2);
+  void clearOpts() => clearField(2);
+  @$pb.TagNumber(2)
+  PostSetupOpts ensureOpts() => $_ensure(1);
 }
 
 class StartSmeshingResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'StartSmeshingResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$9.Status>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: $9.Status.create)
+    ..aOM<$3.Status>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: $3.Status.create)
     ..hasRequiredFields = false
   ;
 
   StartSmeshingResponse._() : super();
   factory StartSmeshingResponse({
-    $9.Status? status,
+    $3.Status? status,
   }) {
     final _result = create();
     if (status != null) {
@@ -181,787 +167,15 @@ class StartSmeshingResponse extends $pb.GeneratedMessage {
   static StartSmeshingResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $9.Status get status => $_getN(0);
+  $3.Status get status => $_getN(0);
   @$pb.TagNumber(1)
-  set status($9.Status v) { setField(1, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasStatus() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearStatus() => clearField(1);
-  @$pb.TagNumber(1)
-  $9.Status ensureStatus() => $_ensure(0);
-}
-
-class StopSmeshingResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'StopSmeshingResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$9.Status>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: $9.Status.create)
-    ..hasRequiredFields = false
-  ;
-
-  StopSmeshingResponse._() : super();
-  factory StopSmeshingResponse({
-    $9.Status? status,
-  }) {
-    final _result = create();
-    if (status != null) {
-      _result.status = status;
-    }
-    return _result;
-  }
-  factory StopSmeshingResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory StopSmeshingResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  StopSmeshingResponse clone() => StopSmeshingResponse()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  StopSmeshingResponse copyWith(void Function(StopSmeshingResponse) updates) => super.copyWith((message) => updates(message as StopSmeshingResponse)) as StopSmeshingResponse; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static StopSmeshingResponse create() => StopSmeshingResponse._();
-  StopSmeshingResponse createEmptyInstance() => create();
-  static $pb.PbList<StopSmeshingResponse> createRepeated() => $pb.PbList<StopSmeshingResponse>();
-  @$core.pragma('dart2js:noInline')
-  static StopSmeshingResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<StopSmeshingResponse>(create);
-  static StopSmeshingResponse? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $9.Status get status => $_getN(0);
-  @$pb.TagNumber(1)
-  set status($9.Status v) { setField(1, v); }
+  set status($3.Status v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStatus() => $_has(0);
   @$pb.TagNumber(1)
   void clearStatus() => clearField(1);
   @$pb.TagNumber(1)
-  $9.Status ensureStatus() => $_ensure(0);
-}
-
-class SetCoinbaseRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SetCoinbaseRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$8.AccountId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', subBuilder: $8.AccountId.create)
-    ..hasRequiredFields = false
-  ;
-
-  SetCoinbaseRequest._() : super();
-  factory SetCoinbaseRequest({
-    $8.AccountId? id,
-  }) {
-    final _result = create();
-    if (id != null) {
-      _result.id = id;
-    }
-    return _result;
-  }
-  factory SetCoinbaseRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SetCoinbaseRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  SetCoinbaseRequest clone() => SetCoinbaseRequest()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  SetCoinbaseRequest copyWith(void Function(SetCoinbaseRequest) updates) => super.copyWith((message) => updates(message as SetCoinbaseRequest)) as SetCoinbaseRequest; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static SetCoinbaseRequest create() => SetCoinbaseRequest._();
-  SetCoinbaseRequest createEmptyInstance() => create();
-  static $pb.PbList<SetCoinbaseRequest> createRepeated() => $pb.PbList<SetCoinbaseRequest>();
-  @$core.pragma('dart2js:noInline')
-  static SetCoinbaseRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetCoinbaseRequest>(create);
-  static SetCoinbaseRequest? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $8.AccountId get id => $_getN(0);
-  @$pb.TagNumber(1)
-  set id($8.AccountId v) { setField(1, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasId() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearId() => clearField(1);
-  @$pb.TagNumber(1)
-  $8.AccountId ensureId() => $_ensure(0);
-}
-
-class SetCoinbaseResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SetCoinbaseResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$9.Status>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: $9.Status.create)
-    ..hasRequiredFields = false
-  ;
-
-  SetCoinbaseResponse._() : super();
-  factory SetCoinbaseResponse({
-    $9.Status? status,
-  }) {
-    final _result = create();
-    if (status != null) {
-      _result.status = status;
-    }
-    return _result;
-  }
-  factory SetCoinbaseResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SetCoinbaseResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  SetCoinbaseResponse clone() => SetCoinbaseResponse()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  SetCoinbaseResponse copyWith(void Function(SetCoinbaseResponse) updates) => super.copyWith((message) => updates(message as SetCoinbaseResponse)) as SetCoinbaseResponse; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static SetCoinbaseResponse create() => SetCoinbaseResponse._();
-  SetCoinbaseResponse createEmptyInstance() => create();
-  static $pb.PbList<SetCoinbaseResponse> createRepeated() => $pb.PbList<SetCoinbaseResponse>();
-  @$core.pragma('dart2js:noInline')
-  static SetCoinbaseResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetCoinbaseResponse>(create);
-  static SetCoinbaseResponse? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $9.Status get status => $_getN(0);
-  @$pb.TagNumber(1)
-  set status($9.Status v) { setField(1, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasStatus() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearStatus() => clearField(1);
-  @$pb.TagNumber(1)
-  $9.Status ensureStatus() => $_ensure(0);
-}
-
-class MinGasResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MinGasResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$8.SimpleInt>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mingas', subBuilder: $8.SimpleInt.create)
-    ..hasRequiredFields = false
-  ;
-
-  MinGasResponse._() : super();
-  factory MinGasResponse({
-    $8.SimpleInt? mingas,
-  }) {
-    final _result = create();
-    if (mingas != null) {
-      _result.mingas = mingas;
-    }
-    return _result;
-  }
-  factory MinGasResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory MinGasResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  MinGasResponse clone() => MinGasResponse()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  MinGasResponse copyWith(void Function(MinGasResponse) updates) => super.copyWith((message) => updates(message as MinGasResponse)) as MinGasResponse; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static MinGasResponse create() => MinGasResponse._();
-  MinGasResponse createEmptyInstance() => create();
-  static $pb.PbList<MinGasResponse> createRepeated() => $pb.PbList<MinGasResponse>();
-  @$core.pragma('dart2js:noInline')
-  static MinGasResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MinGasResponse>(create);
-  static MinGasResponse? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $8.SimpleInt get mingas => $_getN(0);
-  @$pb.TagNumber(1)
-  set mingas($8.SimpleInt v) { setField(1, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasMingas() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearMingas() => clearField(1);
-  @$pb.TagNumber(1)
-  $8.SimpleInt ensureMingas() => $_ensure(0);
-}
-
-class SetMinGasRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SetMinGasRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$8.SimpleInt>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mingas', subBuilder: $8.SimpleInt.create)
-    ..hasRequiredFields = false
-  ;
-
-  SetMinGasRequest._() : super();
-  factory SetMinGasRequest({
-    $8.SimpleInt? mingas,
-  }) {
-    final _result = create();
-    if (mingas != null) {
-      _result.mingas = mingas;
-    }
-    return _result;
-  }
-  factory SetMinGasRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SetMinGasRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  SetMinGasRequest clone() => SetMinGasRequest()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  SetMinGasRequest copyWith(void Function(SetMinGasRequest) updates) => super.copyWith((message) => updates(message as SetMinGasRequest)) as SetMinGasRequest; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static SetMinGasRequest create() => SetMinGasRequest._();
-  SetMinGasRequest createEmptyInstance() => create();
-  static $pb.PbList<SetMinGasRequest> createRepeated() => $pb.PbList<SetMinGasRequest>();
-  @$core.pragma('dart2js:noInline')
-  static SetMinGasRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetMinGasRequest>(create);
-  static SetMinGasRequest? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $8.SimpleInt get mingas => $_getN(0);
-  @$pb.TagNumber(1)
-  set mingas($8.SimpleInt v) { setField(1, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasMingas() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearMingas() => clearField(1);
-  @$pb.TagNumber(1)
-  $8.SimpleInt ensureMingas() => $_ensure(0);
-}
-
-class SetMinGasResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SetMinGasResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$9.Status>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: $9.Status.create)
-    ..hasRequiredFields = false
-  ;
-
-  SetMinGasResponse._() : super();
-  factory SetMinGasResponse({
-    $9.Status? status,
-  }) {
-    final _result = create();
-    if (status != null) {
-      _result.status = status;
-    }
-    return _result;
-  }
-  factory SetMinGasResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SetMinGasResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  SetMinGasResponse clone() => SetMinGasResponse()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  SetMinGasResponse copyWith(void Function(SetMinGasResponse) updates) => super.copyWith((message) => updates(message as SetMinGasResponse)) as SetMinGasResponse; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static SetMinGasResponse create() => SetMinGasResponse._();
-  SetMinGasResponse createEmptyInstance() => create();
-  static $pb.PbList<SetMinGasResponse> createRepeated() => $pb.PbList<SetMinGasResponse>();
-  @$core.pragma('dart2js:noInline')
-  static SetMinGasResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetMinGasResponse>(create);
-  static SetMinGasResponse? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $9.Status get status => $_getN(0);
-  @$pb.TagNumber(1)
-  set status($9.Status v) { setField(1, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasStatus() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearStatus() => clearField(1);
-  @$pb.TagNumber(1)
-  $9.Status ensureStatus() => $_ensure(0);
-}
-
-class CreatePostDataResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CreatePostDataResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$9.Status>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: $9.Status.create)
-    ..hasRequiredFields = false
-  ;
-
-  CreatePostDataResponse._() : super();
-  factory CreatePostDataResponse({
-    $9.Status? status,
-  }) {
-    final _result = create();
-    if (status != null) {
-      _result.status = status;
-    }
-    return _result;
-  }
-  factory CreatePostDataResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory CreatePostDataResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  CreatePostDataResponse clone() => CreatePostDataResponse()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  CreatePostDataResponse copyWith(void Function(CreatePostDataResponse) updates) => super.copyWith((message) => updates(message as CreatePostDataResponse)) as CreatePostDataResponse; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static CreatePostDataResponse create() => CreatePostDataResponse._();
-  CreatePostDataResponse createEmptyInstance() => create();
-  static $pb.PbList<CreatePostDataResponse> createRepeated() => $pb.PbList<CreatePostDataResponse>();
-  @$core.pragma('dart2js:noInline')
-  static CreatePostDataResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreatePostDataResponse>(create);
-  static CreatePostDataResponse? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $9.Status get status => $_getN(0);
-  @$pb.TagNumber(1)
-  set status($9.Status v) { setField(1, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasStatus() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearStatus() => clearField(1);
-  @$pb.TagNumber(1)
-  $9.Status ensureStatus() => $_ensure(0);
-}
-
-class StopPostDataCreationSessionResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'StopPostDataCreationSessionResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$9.Status>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: $9.Status.create)
-    ..hasRequiredFields = false
-  ;
-
-  StopPostDataCreationSessionResponse._() : super();
-  factory StopPostDataCreationSessionResponse({
-    $9.Status? status,
-  }) {
-    final _result = create();
-    if (status != null) {
-      _result.status = status;
-    }
-    return _result;
-  }
-  factory StopPostDataCreationSessionResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory StopPostDataCreationSessionResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  StopPostDataCreationSessionResponse clone() => StopPostDataCreationSessionResponse()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  StopPostDataCreationSessionResponse copyWith(void Function(StopPostDataCreationSessionResponse) updates) => super.copyWith((message) => updates(message as StopPostDataCreationSessionResponse)) as StopPostDataCreationSessionResponse; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static StopPostDataCreationSessionResponse create() => StopPostDataCreationSessionResponse._();
-  StopPostDataCreationSessionResponse createEmptyInstance() => create();
-  static $pb.PbList<StopPostDataCreationSessionResponse> createRepeated() => $pb.PbList<StopPostDataCreationSessionResponse>();
-  @$core.pragma('dart2js:noInline')
-  static StopPostDataCreationSessionResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<StopPostDataCreationSessionResponse>(create);
-  static StopPostDataCreationSessionResponse? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $9.Status get status => $_getN(0);
-  @$pb.TagNumber(1)
-  set status($9.Status v) { setField(1, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasStatus() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearStatus() => clearField(1);
-  @$pb.TagNumber(1)
-  $9.Status ensureStatus() => $_ensure(0);
-}
-
-class SmesherIDResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SmesherIDResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$8.AccountId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountId', subBuilder: $8.AccountId.create)
-    ..hasRequiredFields = false
-  ;
-
-  SmesherIDResponse._() : super();
-  factory SmesherIDResponse({
-    $8.AccountId? accountId,
-  }) {
-    final _result = create();
-    if (accountId != null) {
-      _result.accountId = accountId;
-    }
-    return _result;
-  }
-  factory SmesherIDResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SmesherIDResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  SmesherIDResponse clone() => SmesherIDResponse()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  SmesherIDResponse copyWith(void Function(SmesherIDResponse) updates) => super.copyWith((message) => updates(message as SmesherIDResponse)) as SmesherIDResponse; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static SmesherIDResponse create() => SmesherIDResponse._();
-  SmesherIDResponse createEmptyInstance() => create();
-  static $pb.PbList<SmesherIDResponse> createRepeated() => $pb.PbList<SmesherIDResponse>();
-  @$core.pragma('dart2js:noInline')
-  static SmesherIDResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SmesherIDResponse>(create);
-  static SmesherIDResponse? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $8.AccountId get accountId => $_getN(0);
-  @$pb.TagNumber(1)
-  set accountId($8.AccountId v) { setField(1, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasAccountId() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearAccountId() => clearField(1);
-  @$pb.TagNumber(1)
-  $8.AccountId ensureAccountId() => $_ensure(0);
-}
-
-class CoinbaseResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CoinbaseResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$8.AccountId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountId', subBuilder: $8.AccountId.create)
-    ..hasRequiredFields = false
-  ;
-
-  CoinbaseResponse._() : super();
-  factory CoinbaseResponse({
-    $8.AccountId? accountId,
-  }) {
-    final _result = create();
-    if (accountId != null) {
-      _result.accountId = accountId;
-    }
-    return _result;
-  }
-  factory CoinbaseResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory CoinbaseResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  CoinbaseResponse clone() => CoinbaseResponse()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  CoinbaseResponse copyWith(void Function(CoinbaseResponse) updates) => super.copyWith((message) => updates(message as CoinbaseResponse)) as CoinbaseResponse; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static CoinbaseResponse create() => CoinbaseResponse._();
-  CoinbaseResponse createEmptyInstance() => create();
-  static $pb.PbList<CoinbaseResponse> createRepeated() => $pb.PbList<CoinbaseResponse>();
-  @$core.pragma('dart2js:noInline')
-  static CoinbaseResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CoinbaseResponse>(create);
-  static CoinbaseResponse? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $8.AccountId get accountId => $_getN(0);
-  @$pb.TagNumber(1)
-  set accountId($8.AccountId v) { setField(1, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasAccountId() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearAccountId() => clearField(1);
-  @$pb.TagNumber(1)
-  $8.AccountId ensureAccountId() => $_ensure(0);
-}
-
-class PostComputeProvider extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PostComputeProvider', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', $pb.PbFieldType.OU3)
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'model')
-    ..e<ComputeApiClass>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'computeApi', $pb.PbFieldType.OE, defaultOrMaker: ComputeApiClass.COMPUTE_API_CLASS_UNSPECIFIED, valueOf: ComputeApiClass.valueOf, enumValues: ComputeApiClass.values)
-    ..a<$fixnum.Int64>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'performance', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
-
-  PostComputeProvider._() : super();
-  factory PostComputeProvider({
-    $core.int? id,
-    $core.String? model,
-    ComputeApiClass? computeApi,
-    $fixnum.Int64? performance,
-  }) {
-    final _result = create();
-    if (id != null) {
-      _result.id = id;
-    }
-    if (model != null) {
-      _result.model = model;
-    }
-    if (computeApi != null) {
-      _result.computeApi = computeApi;
-    }
-    if (performance != null) {
-      _result.performance = performance;
-    }
-    return _result;
-  }
-  factory PostComputeProvider.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory PostComputeProvider.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  PostComputeProvider clone() => PostComputeProvider()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  PostComputeProvider copyWith(void Function(PostComputeProvider) updates) => super.copyWith((message) => updates(message as PostComputeProvider)) as PostComputeProvider; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static PostComputeProvider create() => PostComputeProvider._();
-  PostComputeProvider createEmptyInstance() => create();
-  static $pb.PbList<PostComputeProvider> createRepeated() => $pb.PbList<PostComputeProvider>();
-  @$core.pragma('dart2js:noInline')
-  static PostComputeProvider getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PostComputeProvider>(create);
-  static PostComputeProvider? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.int get id => $_getIZ(0);
-  @$pb.TagNumber(1)
-  set id($core.int v) { $_setUnsignedInt32(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasId() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearId() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.String get model => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set model($core.String v) { $_setString(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasModel() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearModel() => clearField(2);
-
-  @$pb.TagNumber(3)
-  ComputeApiClass get computeApi => $_getN(2);
-  @$pb.TagNumber(3)
-  set computeApi(ComputeApiClass v) { setField(3, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasComputeApi() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearComputeApi() => clearField(3);
-
-  @$pb.TagNumber(4)
-  $fixnum.Int64 get performance => $_getI64(3);
-  @$pb.TagNumber(4)
-  set performance($fixnum.Int64 v) { $_setInt64(3, v); }
-  @$pb.TagNumber(4)
-  $core.bool hasPerformance() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearPerformance() => clearField(4);
-}
-
-class PostComputeProvidersResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PostComputeProvidersResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..pc<PostComputeProvider>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'postComputeProvider', $pb.PbFieldType.PM, subBuilder: PostComputeProvider.create)
-    ..hasRequiredFields = false
-  ;
-
-  PostComputeProvidersResponse._() : super();
-  factory PostComputeProvidersResponse({
-    $core.Iterable<PostComputeProvider>? postComputeProvider,
-  }) {
-    final _result = create();
-    if (postComputeProvider != null) {
-      _result.postComputeProvider.addAll(postComputeProvider);
-    }
-    return _result;
-  }
-  factory PostComputeProvidersResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory PostComputeProvidersResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  PostComputeProvidersResponse clone() => PostComputeProvidersResponse()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  PostComputeProvidersResponse copyWith(void Function(PostComputeProvidersResponse) updates) => super.copyWith((message) => updates(message as PostComputeProvidersResponse)) as PostComputeProvidersResponse; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static PostComputeProvidersResponse create() => PostComputeProvidersResponse._();
-  PostComputeProvidersResponse createEmptyInstance() => create();
-  static $pb.PbList<PostComputeProvidersResponse> createRepeated() => $pb.PbList<PostComputeProvidersResponse>();
-  @$core.pragma('dart2js:noInline')
-  static PostComputeProvidersResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PostComputeProvidersResponse>(create);
-  static PostComputeProvidersResponse? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.List<PostComputeProvider> get postComputeProvider => $_getList(0);
-}
-
-class PostData extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PostData', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'path')
-    ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'dataSize', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'append')
-    ..aOB(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'throttle')
-    ..a<$core.int>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'providerId', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
-
-  PostData._() : super();
-  factory PostData({
-    $core.String? path,
-    $fixnum.Int64? dataSize,
-    $core.bool? append,
-    $core.bool? throttle,
-    $core.int? providerId,
-  }) {
-    final _result = create();
-    if (path != null) {
-      _result.path = path;
-    }
-    if (dataSize != null) {
-      _result.dataSize = dataSize;
-    }
-    if (append != null) {
-      _result.append = append;
-    }
-    if (throttle != null) {
-      _result.throttle = throttle;
-    }
-    if (providerId != null) {
-      _result.providerId = providerId;
-    }
-    return _result;
-  }
-  factory PostData.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory PostData.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  PostData clone() => PostData()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  PostData copyWith(void Function(PostData) updates) => super.copyWith((message) => updates(message as PostData)) as PostData; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static PostData create() => PostData._();
-  PostData createEmptyInstance() => create();
-  static $pb.PbList<PostData> createRepeated() => $pb.PbList<PostData>();
-  @$core.pragma('dart2js:noInline')
-  static PostData getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PostData>(create);
-  static PostData? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get path => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set path($core.String v) { $_setString(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasPath() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearPath() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $fixnum.Int64 get dataSize => $_getI64(1);
-  @$pb.TagNumber(2)
-  set dataSize($fixnum.Int64 v) { $_setInt64(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasDataSize() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearDataSize() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $core.bool get append => $_getBF(2);
-  @$pb.TagNumber(3)
-  set append($core.bool v) { $_setBool(2, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasAppend() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearAppend() => clearField(3);
-
-  @$pb.TagNumber(4)
-  $core.bool get throttle => $_getBF(3);
-  @$pb.TagNumber(4)
-  set throttle($core.bool v) { $_setBool(3, v); }
-  @$pb.TagNumber(4)
-  $core.bool hasThrottle() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearThrottle() => clearField(4);
-
-  @$pb.TagNumber(5)
-  $core.int get providerId => $_getIZ(4);
-  @$pb.TagNumber(5)
-  set providerId($core.int v) { $_setUnsignedInt32(4, v); }
-  @$pb.TagNumber(5)
-  $core.bool hasProviderId() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearProviderId() => clearField(5);
-}
-
-class CreatePostDataRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CreatePostDataRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<PostData>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'data', subBuilder: PostData.create)
-    ..hasRequiredFields = false
-  ;
-
-  CreatePostDataRequest._() : super();
-  factory CreatePostDataRequest({
-    PostData? data,
-  }) {
-    final _result = create();
-    if (data != null) {
-      _result.data = data;
-    }
-    return _result;
-  }
-  factory CreatePostDataRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory CreatePostDataRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  CreatePostDataRequest clone() => CreatePostDataRequest()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  CreatePostDataRequest copyWith(void Function(CreatePostDataRequest) updates) => super.copyWith((message) => updates(message as CreatePostDataRequest)) as CreatePostDataRequest; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static CreatePostDataRequest create() => CreatePostDataRequest._();
-  CreatePostDataRequest createEmptyInstance() => create();
-  static $pb.PbList<CreatePostDataRequest> createRepeated() => $pb.PbList<CreatePostDataRequest>();
-  @$core.pragma('dart2js:noInline')
-  static CreatePostDataRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreatePostDataRequest>(create);
-  static CreatePostDataRequest? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  PostData get data => $_getN(0);
-  @$pb.TagNumber(1)
-  set data(PostData v) { setField(1, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasData() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearData() => clearField(1);
-  @$pb.TagNumber(1)
-  PostData ensureData() => $_ensure(0);
+  $3.Status ensureStatus() => $_ensure(0);
 }
 
 class StopSmeshingRequest extends $pb.GeneratedMessage {
@@ -1011,181 +225,15 @@ class StopSmeshingRequest extends $pb.GeneratedMessage {
   void clearDeleteFiles() => clearField(1);
 }
 
-class StopPostDataCreationSessionRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'StopPostDataCreationSessionRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOB(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'deleteFiles')
+class StopSmeshingResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'StopSmeshingResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
+    ..aOM<$3.Status>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: $3.Status.create)
     ..hasRequiredFields = false
   ;
 
-  StopPostDataCreationSessionRequest._() : super();
-  factory StopPostDataCreationSessionRequest({
-    $core.bool? deleteFiles,
-  }) {
-    final _result = create();
-    if (deleteFiles != null) {
-      _result.deleteFiles = deleteFiles;
-    }
-    return _result;
-  }
-  factory StopPostDataCreationSessionRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory StopPostDataCreationSessionRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  StopPostDataCreationSessionRequest clone() => StopPostDataCreationSessionRequest()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  StopPostDataCreationSessionRequest copyWith(void Function(StopPostDataCreationSessionRequest) updates) => super.copyWith((message) => updates(message as StopPostDataCreationSessionRequest)) as StopPostDataCreationSessionRequest; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static StopPostDataCreationSessionRequest create() => StopPostDataCreationSessionRequest._();
-  StopPostDataCreationSessionRequest createEmptyInstance() => create();
-  static $pb.PbList<StopPostDataCreationSessionRequest> createRepeated() => $pb.PbList<StopPostDataCreationSessionRequest>();
-  @$core.pragma('dart2js:noInline')
-  static StopPostDataCreationSessionRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<StopPostDataCreationSessionRequest>(create);
-  static StopPostDataCreationSessionRequest? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.bool get deleteFiles => $_getBF(0);
-  @$pb.TagNumber(1)
-  set deleteFiles($core.bool v) { $_setBool(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasDeleteFiles() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearDeleteFiles() => clearField(1);
-}
-
-class PostStatus extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PostStatus', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<PostData>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'postData', subBuilder: PostData.create)
-    ..e<PostStatus_FilesStatus>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'filesStatus', $pb.PbFieldType.OE, defaultOrMaker: PostStatus_FilesStatus.FILES_STATUS_UNSPECIFIED, valueOf: PostStatus_FilesStatus.valueOf, enumValues: PostStatus_FilesStatus.values)
-    ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'initInProgress')
-    ..a<$fixnum.Int64>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bytesWritten', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'errorMessage')
-    ..e<PostStatus_ErrorType>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'errorType', $pb.PbFieldType.OE, defaultOrMaker: PostStatus_ErrorType.ERROR_TYPE_UNSPECIFIED, valueOf: PostStatus_ErrorType.valueOf, enumValues: PostStatus_ErrorType.values)
-    ..hasRequiredFields = false
-  ;
-
-  PostStatus._() : super();
-  factory PostStatus({
-    PostData? postData,
-    PostStatus_FilesStatus? filesStatus,
-    $core.bool? initInProgress,
-    $fixnum.Int64? bytesWritten,
-    $core.String? errorMessage,
-    PostStatus_ErrorType? errorType,
-  }) {
-    final _result = create();
-    if (postData != null) {
-      _result.postData = postData;
-    }
-    if (filesStatus != null) {
-      _result.filesStatus = filesStatus;
-    }
-    if (initInProgress != null) {
-      _result.initInProgress = initInProgress;
-    }
-    if (bytesWritten != null) {
-      _result.bytesWritten = bytesWritten;
-    }
-    if (errorMessage != null) {
-      _result.errorMessage = errorMessage;
-    }
-    if (errorType != null) {
-      _result.errorType = errorType;
-    }
-    return _result;
-  }
-  factory PostStatus.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory PostStatus.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  PostStatus clone() => PostStatus()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  PostStatus copyWith(void Function(PostStatus) updates) => super.copyWith((message) => updates(message as PostStatus)) as PostStatus; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static PostStatus create() => PostStatus._();
-  PostStatus createEmptyInstance() => create();
-  static $pb.PbList<PostStatus> createRepeated() => $pb.PbList<PostStatus>();
-  @$core.pragma('dart2js:noInline')
-  static PostStatus getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PostStatus>(create);
-  static PostStatus? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  PostData get postData => $_getN(0);
-  @$pb.TagNumber(1)
-  set postData(PostData v) { setField(1, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasPostData() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearPostData() => clearField(1);
-  @$pb.TagNumber(1)
-  PostData ensurePostData() => $_ensure(0);
-
-  @$pb.TagNumber(2)
-  PostStatus_FilesStatus get filesStatus => $_getN(1);
-  @$pb.TagNumber(2)
-  set filesStatus(PostStatus_FilesStatus v) { setField(2, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasFilesStatus() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearFilesStatus() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $core.bool get initInProgress => $_getBF(2);
-  @$pb.TagNumber(3)
-  set initInProgress($core.bool v) { $_setBool(2, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasInitInProgress() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearInitInProgress() => clearField(3);
-
-  @$pb.TagNumber(4)
-  $fixnum.Int64 get bytesWritten => $_getI64(3);
-  @$pb.TagNumber(4)
-  set bytesWritten($fixnum.Int64 v) { $_setInt64(3, v); }
-  @$pb.TagNumber(4)
-  $core.bool hasBytesWritten() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearBytesWritten() => clearField(4);
-
-  @$pb.TagNumber(5)
-  $core.String get errorMessage => $_getSZ(4);
-  @$pb.TagNumber(5)
-  set errorMessage($core.String v) { $_setString(4, v); }
-  @$pb.TagNumber(5)
-  $core.bool hasErrorMessage() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearErrorMessage() => clearField(5);
-
-  @$pb.TagNumber(6)
-  PostStatus_ErrorType get errorType => $_getN(5);
-  @$pb.TagNumber(6)
-  set errorType(PostStatus_ErrorType v) { setField(6, v); }
-  @$pb.TagNumber(6)
-  $core.bool hasErrorType() => $_has(5);
-  @$pb.TagNumber(6)
-  void clearErrorType() => clearField(6);
-}
-
-class PostStatusResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PostStatusResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<PostStatus>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: PostStatus.create)
-    ..hasRequiredFields = false
-  ;
-
-  PostStatusResponse._() : super();
-  factory PostStatusResponse({
-    PostStatus? status,
+  StopSmeshingResponse._() : super();
+  factory StopSmeshingResponse({
+    $3.Status? status,
   }) {
     final _result = create();
     if (status != null) {
@@ -1193,48 +241,97 @@ class PostStatusResponse extends $pb.GeneratedMessage {
     }
     return _result;
   }
-  factory PostStatusResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory PostStatusResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory StopSmeshingResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory StopSmeshingResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  PostStatusResponse clone() => PostStatusResponse()..mergeFromMessage(this);
+  StopSmeshingResponse clone() => StopSmeshingResponse()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  PostStatusResponse copyWith(void Function(PostStatusResponse) updates) => super.copyWith((message) => updates(message as PostStatusResponse)) as PostStatusResponse; // ignore: deprecated_member_use
+  StopSmeshingResponse copyWith(void Function(StopSmeshingResponse) updates) => super.copyWith((message) => updates(message as StopSmeshingResponse)) as StopSmeshingResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static PostStatusResponse create() => PostStatusResponse._();
-  PostStatusResponse createEmptyInstance() => create();
-  static $pb.PbList<PostStatusResponse> createRepeated() => $pb.PbList<PostStatusResponse>();
+  static StopSmeshingResponse create() => StopSmeshingResponse._();
+  StopSmeshingResponse createEmptyInstance() => create();
+  static $pb.PbList<StopSmeshingResponse> createRepeated() => $pb.PbList<StopSmeshingResponse>();
   @$core.pragma('dart2js:noInline')
-  static PostStatusResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PostStatusResponse>(create);
-  static PostStatusResponse? _defaultInstance;
+  static StopSmeshingResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<StopSmeshingResponse>(create);
+  static StopSmeshingResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  PostStatus get status => $_getN(0);
+  $3.Status get status => $_getN(0);
   @$pb.TagNumber(1)
-  set status(PostStatus v) { setField(1, v); }
+  set status($3.Status v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStatus() => $_has(0);
   @$pb.TagNumber(1)
   void clearStatus() => clearField(1);
   @$pb.TagNumber(1)
-  PostStatus ensureStatus() => $_ensure(0);
+  $3.Status ensureStatus() => $_ensure(0);
 }
 
-class PostDataCreationProgressStreamResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PostDataCreationProgressStreamResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<PostStatus>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: PostStatus.create)
+class SetCoinbaseRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SetCoinbaseRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
+    ..aOM<$0.AccountId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', subBuilder: $0.AccountId.create)
     ..hasRequiredFields = false
   ;
 
-  PostDataCreationProgressStreamResponse._() : super();
-  factory PostDataCreationProgressStreamResponse({
-    PostStatus? status,
+  SetCoinbaseRequest._() : super();
+  factory SetCoinbaseRequest({
+    $0.AccountId? id,
+  }) {
+    final _result = create();
+    if (id != null) {
+      _result.id = id;
+    }
+    return _result;
+  }
+  factory SetCoinbaseRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetCoinbaseRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SetCoinbaseRequest clone() => SetCoinbaseRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SetCoinbaseRequest copyWith(void Function(SetCoinbaseRequest) updates) => super.copyWith((message) => updates(message as SetCoinbaseRequest)) as SetCoinbaseRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SetCoinbaseRequest create() => SetCoinbaseRequest._();
+  SetCoinbaseRequest createEmptyInstance() => create();
+  static $pb.PbList<SetCoinbaseRequest> createRepeated() => $pb.PbList<SetCoinbaseRequest>();
+  @$core.pragma('dart2js:noInline')
+  static SetCoinbaseRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetCoinbaseRequest>(create);
+  static SetCoinbaseRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.AccountId get id => $_getN(0);
+  @$pb.TagNumber(1)
+  set id($0.AccountId v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.AccountId ensureId() => $_ensure(0);
+}
+
+class SetCoinbaseResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SetCoinbaseResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
+    ..aOM<$3.Status>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: $3.Status.create)
+    ..hasRequiredFields = false
+  ;
+
+  SetCoinbaseResponse._() : super();
+  factory SetCoinbaseResponse({
+    $3.Status? status,
   }) {
     final _result = create();
     if (status != null) {
@@ -1242,37 +339,282 @@ class PostDataCreationProgressStreamResponse extends $pb.GeneratedMessage {
     }
     return _result;
   }
-  factory PostDataCreationProgressStreamResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory PostDataCreationProgressStreamResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory SetCoinbaseResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetCoinbaseResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  PostDataCreationProgressStreamResponse clone() => PostDataCreationProgressStreamResponse()..mergeFromMessage(this);
+  SetCoinbaseResponse clone() => SetCoinbaseResponse()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  PostDataCreationProgressStreamResponse copyWith(void Function(PostDataCreationProgressStreamResponse) updates) => super.copyWith((message) => updates(message as PostDataCreationProgressStreamResponse)) as PostDataCreationProgressStreamResponse; // ignore: deprecated_member_use
+  SetCoinbaseResponse copyWith(void Function(SetCoinbaseResponse) updates) => super.copyWith((message) => updates(message as SetCoinbaseResponse)) as SetCoinbaseResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static PostDataCreationProgressStreamResponse create() => PostDataCreationProgressStreamResponse._();
-  PostDataCreationProgressStreamResponse createEmptyInstance() => create();
-  static $pb.PbList<PostDataCreationProgressStreamResponse> createRepeated() => $pb.PbList<PostDataCreationProgressStreamResponse>();
+  static SetCoinbaseResponse create() => SetCoinbaseResponse._();
+  SetCoinbaseResponse createEmptyInstance() => create();
+  static $pb.PbList<SetCoinbaseResponse> createRepeated() => $pb.PbList<SetCoinbaseResponse>();
   @$core.pragma('dart2js:noInline')
-  static PostDataCreationProgressStreamResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PostDataCreationProgressStreamResponse>(create);
-  static PostDataCreationProgressStreamResponse? _defaultInstance;
+  static SetCoinbaseResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetCoinbaseResponse>(create);
+  static SetCoinbaseResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  PostStatus get status => $_getN(0);
+  $3.Status get status => $_getN(0);
   @$pb.TagNumber(1)
-  set status(PostStatus v) { setField(1, v); }
+  set status($3.Status v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStatus() => $_has(0);
   @$pb.TagNumber(1)
   void clearStatus() => clearField(1);
   @$pb.TagNumber(1)
-  PostStatus ensureStatus() => $_ensure(0);
+  $3.Status ensureStatus() => $_ensure(0);
+}
+
+class MinGasResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MinGasResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
+    ..aOM<$0.SimpleInt>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mingas', subBuilder: $0.SimpleInt.create)
+    ..hasRequiredFields = false
+  ;
+
+  MinGasResponse._() : super();
+  factory MinGasResponse({
+    $0.SimpleInt? mingas,
+  }) {
+    final _result = create();
+    if (mingas != null) {
+      _result.mingas = mingas;
+    }
+    return _result;
+  }
+  factory MinGasResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory MinGasResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  MinGasResponse clone() => MinGasResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  MinGasResponse copyWith(void Function(MinGasResponse) updates) => super.copyWith((message) => updates(message as MinGasResponse)) as MinGasResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static MinGasResponse create() => MinGasResponse._();
+  MinGasResponse createEmptyInstance() => create();
+  static $pb.PbList<MinGasResponse> createRepeated() => $pb.PbList<MinGasResponse>();
+  @$core.pragma('dart2js:noInline')
+  static MinGasResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MinGasResponse>(create);
+  static MinGasResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.SimpleInt get mingas => $_getN(0);
+  @$pb.TagNumber(1)
+  set mingas($0.SimpleInt v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasMingas() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMingas() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.SimpleInt ensureMingas() => $_ensure(0);
+}
+
+class SetMinGasRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SetMinGasRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
+    ..aOM<$0.SimpleInt>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mingas', subBuilder: $0.SimpleInt.create)
+    ..hasRequiredFields = false
+  ;
+
+  SetMinGasRequest._() : super();
+  factory SetMinGasRequest({
+    $0.SimpleInt? mingas,
+  }) {
+    final _result = create();
+    if (mingas != null) {
+      _result.mingas = mingas;
+    }
+    return _result;
+  }
+  factory SetMinGasRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetMinGasRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SetMinGasRequest clone() => SetMinGasRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SetMinGasRequest copyWith(void Function(SetMinGasRequest) updates) => super.copyWith((message) => updates(message as SetMinGasRequest)) as SetMinGasRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SetMinGasRequest create() => SetMinGasRequest._();
+  SetMinGasRequest createEmptyInstance() => create();
+  static $pb.PbList<SetMinGasRequest> createRepeated() => $pb.PbList<SetMinGasRequest>();
+  @$core.pragma('dart2js:noInline')
+  static SetMinGasRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetMinGasRequest>(create);
+  static SetMinGasRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.SimpleInt get mingas => $_getN(0);
+  @$pb.TagNumber(1)
+  set mingas($0.SimpleInt v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasMingas() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMingas() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.SimpleInt ensureMingas() => $_ensure(0);
+}
+
+class SetMinGasResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SetMinGasResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
+    ..aOM<$3.Status>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: $3.Status.create)
+    ..hasRequiredFields = false
+  ;
+
+  SetMinGasResponse._() : super();
+  factory SetMinGasResponse({
+    $3.Status? status,
+  }) {
+    final _result = create();
+    if (status != null) {
+      _result.status = status;
+    }
+    return _result;
+  }
+  factory SetMinGasResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetMinGasResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SetMinGasResponse clone() => SetMinGasResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SetMinGasResponse copyWith(void Function(SetMinGasResponse) updates) => super.copyWith((message) => updates(message as SetMinGasResponse)) as SetMinGasResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SetMinGasResponse create() => SetMinGasResponse._();
+  SetMinGasResponse createEmptyInstance() => create();
+  static $pb.PbList<SetMinGasResponse> createRepeated() => $pb.PbList<SetMinGasResponse>();
+  @$core.pragma('dart2js:noInline')
+  static SetMinGasResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetMinGasResponse>(create);
+  static SetMinGasResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $3.Status get status => $_getN(0);
+  @$pb.TagNumber(1)
+  set status($3.Status v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasStatus() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStatus() => clearField(1);
+  @$pb.TagNumber(1)
+  $3.Status ensureStatus() => $_ensure(0);
+}
+
+class SmesherIDResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SmesherIDResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
+    ..aOM<$0.AccountId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountId', subBuilder: $0.AccountId.create)
+    ..hasRequiredFields = false
+  ;
+
+  SmesherIDResponse._() : super();
+  factory SmesherIDResponse({
+    $0.AccountId? accountId,
+  }) {
+    final _result = create();
+    if (accountId != null) {
+      _result.accountId = accountId;
+    }
+    return _result;
+  }
+  factory SmesherIDResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SmesherIDResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SmesherIDResponse clone() => SmesherIDResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SmesherIDResponse copyWith(void Function(SmesherIDResponse) updates) => super.copyWith((message) => updates(message as SmesherIDResponse)) as SmesherIDResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SmesherIDResponse create() => SmesherIDResponse._();
+  SmesherIDResponse createEmptyInstance() => create();
+  static $pb.PbList<SmesherIDResponse> createRepeated() => $pb.PbList<SmesherIDResponse>();
+  @$core.pragma('dart2js:noInline')
+  static SmesherIDResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SmesherIDResponse>(create);
+  static SmesherIDResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.AccountId get accountId => $_getN(0);
+  @$pb.TagNumber(1)
+  set accountId($0.AccountId v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasAccountId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAccountId() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.AccountId ensureAccountId() => $_ensure(0);
+}
+
+class CoinbaseResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CoinbaseResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
+    ..aOM<$0.AccountId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountId', subBuilder: $0.AccountId.create)
+    ..hasRequiredFields = false
+  ;
+
+  CoinbaseResponse._() : super();
+  factory CoinbaseResponse({
+    $0.AccountId? accountId,
+  }) {
+    final _result = create();
+    if (accountId != null) {
+      _result.accountId = accountId;
+    }
+    return _result;
+  }
+  factory CoinbaseResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CoinbaseResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CoinbaseResponse clone() => CoinbaseResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CoinbaseResponse copyWith(void Function(CoinbaseResponse) updates) => super.copyWith((message) => updates(message as CoinbaseResponse)) as CoinbaseResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CoinbaseResponse create() => CoinbaseResponse._();
+  CoinbaseResponse createEmptyInstance() => create();
+  static $pb.PbList<CoinbaseResponse> createRepeated() => $pb.PbList<CoinbaseResponse>();
+  @$core.pragma('dart2js:noInline')
+  static CoinbaseResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CoinbaseResponse>(create);
+  static CoinbaseResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.AccountId get accountId => $_getN(0);
+  @$pb.TagNumber(1)
+  set accountId($0.AccountId v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasAccountId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAccountId() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.AccountId ensureAccountId() => $_ensure(0);
 }
 
 class EstimatedRewardsRequest extends $pb.GeneratedMessage {
@@ -1306,22 +648,22 @@ class EstimatedRewardsRequest extends $pb.GeneratedMessage {
 
 class EstimatedRewardsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'EstimatedRewardsResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$8.Amount>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount', subBuilder: $8.Amount.create)
-    ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'dataSize', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOM<$0.Amount>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount', subBuilder: $0.Amount.create)
+    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'numUnits', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
   EstimatedRewardsResponse._() : super();
   factory EstimatedRewardsResponse({
-    $8.Amount? amount,
-    $fixnum.Int64? dataSize,
+    $0.Amount? amount,
+    $core.int? numUnits,
   }) {
     final _result = create();
     if (amount != null) {
       _result.amount = amount;
     }
-    if (dataSize != null) {
-      _result.dataSize = dataSize;
+    if (numUnits != null) {
+      _result.numUnits = numUnits;
     }
     return _result;
   }
@@ -1347,23 +689,581 @@ class EstimatedRewardsResponse extends $pb.GeneratedMessage {
   static EstimatedRewardsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $8.Amount get amount => $_getN(0);
+  $0.Amount get amount => $_getN(0);
   @$pb.TagNumber(1)
-  set amount($8.Amount v) { setField(1, v); }
+  set amount($0.Amount v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAmount() => $_has(0);
   @$pb.TagNumber(1)
   void clearAmount() => clearField(1);
   @$pb.TagNumber(1)
-  $8.Amount ensureAmount() => $_ensure(0);
+  $0.Amount ensureAmount() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $fixnum.Int64 get dataSize => $_getI64(1);
+  $core.int get numUnits => $_getIZ(1);
   @$pb.TagNumber(2)
-  set dataSize($fixnum.Int64 v) { $_setInt64(1, v); }
+  set numUnits($core.int v) { $_setUnsignedInt32(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasDataSize() => $_has(1);
+  $core.bool hasNumUnits() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDataSize() => clearField(2);
+  void clearNumUnits() => clearField(2);
+}
+
+class PostSetupComputeProvidersRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PostSetupComputeProvidersRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
+    ..aOB(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'benchmark')
+    ..hasRequiredFields = false
+  ;
+
+  PostSetupComputeProvidersRequest._() : super();
+  factory PostSetupComputeProvidersRequest({
+    $core.bool? benchmark,
+  }) {
+    final _result = create();
+    if (benchmark != null) {
+      _result.benchmark = benchmark;
+    }
+    return _result;
+  }
+  factory PostSetupComputeProvidersRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory PostSetupComputeProvidersRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  PostSetupComputeProvidersRequest clone() => PostSetupComputeProvidersRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  PostSetupComputeProvidersRequest copyWith(void Function(PostSetupComputeProvidersRequest) updates) => super.copyWith((message) => updates(message as PostSetupComputeProvidersRequest)) as PostSetupComputeProvidersRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PostSetupComputeProvidersRequest create() => PostSetupComputeProvidersRequest._();
+  PostSetupComputeProvidersRequest createEmptyInstance() => create();
+  static $pb.PbList<PostSetupComputeProvidersRequest> createRepeated() => $pb.PbList<PostSetupComputeProvidersRequest>();
+  @$core.pragma('dart2js:noInline')
+  static PostSetupComputeProvidersRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PostSetupComputeProvidersRequest>(create);
+  static PostSetupComputeProvidersRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.bool get benchmark => $_getBF(0);
+  @$pb.TagNumber(1)
+  set benchmark($core.bool v) { $_setBool(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasBenchmark() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearBenchmark() => clearField(1);
+}
+
+class PostSetupComputeProvidersResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PostSetupComputeProvidersResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
+    ..pc<PostSetupComputeProvider>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'providers', $pb.PbFieldType.PM, subBuilder: PostSetupComputeProvider.create)
+    ..hasRequiredFields = false
+  ;
+
+  PostSetupComputeProvidersResponse._() : super();
+  factory PostSetupComputeProvidersResponse({
+    $core.Iterable<PostSetupComputeProvider>? providers,
+  }) {
+    final _result = create();
+    if (providers != null) {
+      _result.providers.addAll(providers);
+    }
+    return _result;
+  }
+  factory PostSetupComputeProvidersResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory PostSetupComputeProvidersResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  PostSetupComputeProvidersResponse clone() => PostSetupComputeProvidersResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  PostSetupComputeProvidersResponse copyWith(void Function(PostSetupComputeProvidersResponse) updates) => super.copyWith((message) => updates(message as PostSetupComputeProvidersResponse)) as PostSetupComputeProvidersResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PostSetupComputeProvidersResponse create() => PostSetupComputeProvidersResponse._();
+  PostSetupComputeProvidersResponse createEmptyInstance() => create();
+  static $pb.PbList<PostSetupComputeProvidersResponse> createRepeated() => $pb.PbList<PostSetupComputeProvidersResponse>();
+  @$core.pragma('dart2js:noInline')
+  static PostSetupComputeProvidersResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PostSetupComputeProvidersResponse>(create);
+  static PostSetupComputeProvidersResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<PostSetupComputeProvider> get providers => $_getList(0);
+}
+
+class PostSetupStatusResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PostSetupStatusResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
+    ..aOM<PostSetupStatus>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: PostSetupStatus.create)
+    ..hasRequiredFields = false
+  ;
+
+  PostSetupStatusResponse._() : super();
+  factory PostSetupStatusResponse({
+    PostSetupStatus? status,
+  }) {
+    final _result = create();
+    if (status != null) {
+      _result.status = status;
+    }
+    return _result;
+  }
+  factory PostSetupStatusResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory PostSetupStatusResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  PostSetupStatusResponse clone() => PostSetupStatusResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  PostSetupStatusResponse copyWith(void Function(PostSetupStatusResponse) updates) => super.copyWith((message) => updates(message as PostSetupStatusResponse)) as PostSetupStatusResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PostSetupStatusResponse create() => PostSetupStatusResponse._();
+  PostSetupStatusResponse createEmptyInstance() => create();
+  static $pb.PbList<PostSetupStatusResponse> createRepeated() => $pb.PbList<PostSetupStatusResponse>();
+  @$core.pragma('dart2js:noInline')
+  static PostSetupStatusResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PostSetupStatusResponse>(create);
+  static PostSetupStatusResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  PostSetupStatus get status => $_getN(0);
+  @$pb.TagNumber(1)
+  set status(PostSetupStatus v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasStatus() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStatus() => clearField(1);
+  @$pb.TagNumber(1)
+  PostSetupStatus ensureStatus() => $_ensure(0);
+}
+
+class PostSetupStatusStreamResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PostSetupStatusStreamResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
+    ..aOM<PostSetupStatus>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', subBuilder: PostSetupStatus.create)
+    ..hasRequiredFields = false
+  ;
+
+  PostSetupStatusStreamResponse._() : super();
+  factory PostSetupStatusStreamResponse({
+    PostSetupStatus? status,
+  }) {
+    final _result = create();
+    if (status != null) {
+      _result.status = status;
+    }
+    return _result;
+  }
+  factory PostSetupStatusStreamResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory PostSetupStatusStreamResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  PostSetupStatusStreamResponse clone() => PostSetupStatusStreamResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  PostSetupStatusStreamResponse copyWith(void Function(PostSetupStatusStreamResponse) updates) => super.copyWith((message) => updates(message as PostSetupStatusStreamResponse)) as PostSetupStatusStreamResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PostSetupStatusStreamResponse create() => PostSetupStatusStreamResponse._();
+  PostSetupStatusStreamResponse createEmptyInstance() => create();
+  static $pb.PbList<PostSetupStatusStreamResponse> createRepeated() => $pb.PbList<PostSetupStatusStreamResponse>();
+  @$core.pragma('dart2js:noInline')
+  static PostSetupStatusStreamResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PostSetupStatusStreamResponse>(create);
+  static PostSetupStatusStreamResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  PostSetupStatus get status => $_getN(0);
+  @$pb.TagNumber(1)
+  set status(PostSetupStatus v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasStatus() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStatus() => clearField(1);
+  @$pb.TagNumber(1)
+  PostSetupStatus ensureStatus() => $_ensure(0);
+}
+
+class PostConfigResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PostConfigResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
+    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bitsPerLabel', $pb.PbFieldType.OU3)
+    ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'labelsPerUnit', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'minNumUnits', $pb.PbFieldType.OU3)
+    ..a<$core.int>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'maxNumUnits', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
+  PostConfigResponse._() : super();
+  factory PostConfigResponse({
+    $core.int? bitsPerLabel,
+    $fixnum.Int64? labelsPerUnit,
+    $core.int? minNumUnits,
+    $core.int? maxNumUnits,
+  }) {
+    final _result = create();
+    if (bitsPerLabel != null) {
+      _result.bitsPerLabel = bitsPerLabel;
+    }
+    if (labelsPerUnit != null) {
+      _result.labelsPerUnit = labelsPerUnit;
+    }
+    if (minNumUnits != null) {
+      _result.minNumUnits = minNumUnits;
+    }
+    if (maxNumUnits != null) {
+      _result.maxNumUnits = maxNumUnits;
+    }
+    return _result;
+  }
+  factory PostConfigResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory PostConfigResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  PostConfigResponse clone() => PostConfigResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  PostConfigResponse copyWith(void Function(PostConfigResponse) updates) => super.copyWith((message) => updates(message as PostConfigResponse)) as PostConfigResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PostConfigResponse create() => PostConfigResponse._();
+  PostConfigResponse createEmptyInstance() => create();
+  static $pb.PbList<PostConfigResponse> createRepeated() => $pb.PbList<PostConfigResponse>();
+  @$core.pragma('dart2js:noInline')
+  static PostConfigResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PostConfigResponse>(create);
+  static PostConfigResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get bitsPerLabel => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set bitsPerLabel($core.int v) { $_setUnsignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasBitsPerLabel() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearBitsPerLabel() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get labelsPerUnit => $_getI64(1);
+  @$pb.TagNumber(2)
+  set labelsPerUnit($fixnum.Int64 v) { $_setInt64(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasLabelsPerUnit() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLabelsPerUnit() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get minNumUnits => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set minNumUnits($core.int v) { $_setUnsignedInt32(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasMinNumUnits() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearMinNumUnits() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.int get maxNumUnits => $_getIZ(3);
+  @$pb.TagNumber(4)
+  set maxNumUnits($core.int v) { $_setUnsignedInt32(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasMaxNumUnits() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearMaxNumUnits() => clearField(4);
+}
+
+class PostSetupComputeProvider extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PostSetupComputeProvider', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
+    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', $pb.PbFieldType.OU3)
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'model')
+    ..e<PostSetupComputeProvider_ComputeApiClass>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'computeApi', $pb.PbFieldType.OE, defaultOrMaker: PostSetupComputeProvider_ComputeApiClass.COMPUTE_API_CLASS_UNSPECIFIED, valueOf: PostSetupComputeProvider_ComputeApiClass.valueOf, enumValues: PostSetupComputeProvider_ComputeApiClass.values)
+    ..a<$fixnum.Int64>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'performance', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
+  PostSetupComputeProvider._() : super();
+  factory PostSetupComputeProvider({
+    $core.int? id,
+    $core.String? model,
+    PostSetupComputeProvider_ComputeApiClass? computeApi,
+    $fixnum.Int64? performance,
+  }) {
+    final _result = create();
+    if (id != null) {
+      _result.id = id;
+    }
+    if (model != null) {
+      _result.model = model;
+    }
+    if (computeApi != null) {
+      _result.computeApi = computeApi;
+    }
+    if (performance != null) {
+      _result.performance = performance;
+    }
+    return _result;
+  }
+  factory PostSetupComputeProvider.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory PostSetupComputeProvider.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  PostSetupComputeProvider clone() => PostSetupComputeProvider()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  PostSetupComputeProvider copyWith(void Function(PostSetupComputeProvider) updates) => super.copyWith((message) => updates(message as PostSetupComputeProvider)) as PostSetupComputeProvider; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PostSetupComputeProvider create() => PostSetupComputeProvider._();
+  PostSetupComputeProvider createEmptyInstance() => create();
+  static $pb.PbList<PostSetupComputeProvider> createRepeated() => $pb.PbList<PostSetupComputeProvider>();
+  @$core.pragma('dart2js:noInline')
+  static PostSetupComputeProvider getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PostSetupComputeProvider>(create);
+  static PostSetupComputeProvider? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get id => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set id($core.int v) { $_setUnsignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get model => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set model($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasModel() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearModel() => clearField(2);
+
+  @$pb.TagNumber(3)
+  PostSetupComputeProvider_ComputeApiClass get computeApi => $_getN(2);
+  @$pb.TagNumber(3)
+  set computeApi(PostSetupComputeProvider_ComputeApiClass v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasComputeApi() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearComputeApi() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get performance => $_getI64(3);
+  @$pb.TagNumber(4)
+  set performance($fixnum.Int64 v) { $_setInt64(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasPerformance() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearPerformance() => clearField(4);
+}
+
+class PostSetupOpts extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PostSetupOpts', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'dataDir')
+    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'numUnits', $pb.PbFieldType.OU3)
+    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'numFiles', $pb.PbFieldType.OU3)
+    ..a<$core.int>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'computeProviderId', $pb.PbFieldType.OU3)
+    ..aOB(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'throttle')
+    ..hasRequiredFields = false
+  ;
+
+  PostSetupOpts._() : super();
+  factory PostSetupOpts({
+    $core.String? dataDir,
+    $core.int? numUnits,
+    $core.int? numFiles,
+    $core.int? computeProviderId,
+    $core.bool? throttle,
+  }) {
+    final _result = create();
+    if (dataDir != null) {
+      _result.dataDir = dataDir;
+    }
+    if (numUnits != null) {
+      _result.numUnits = numUnits;
+    }
+    if (numFiles != null) {
+      _result.numFiles = numFiles;
+    }
+    if (computeProviderId != null) {
+      _result.computeProviderId = computeProviderId;
+    }
+    if (throttle != null) {
+      _result.throttle = throttle;
+    }
+    return _result;
+  }
+  factory PostSetupOpts.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory PostSetupOpts.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  PostSetupOpts clone() => PostSetupOpts()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  PostSetupOpts copyWith(void Function(PostSetupOpts) updates) => super.copyWith((message) => updates(message as PostSetupOpts)) as PostSetupOpts; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PostSetupOpts create() => PostSetupOpts._();
+  PostSetupOpts createEmptyInstance() => create();
+  static $pb.PbList<PostSetupOpts> createRepeated() => $pb.PbList<PostSetupOpts>();
+  @$core.pragma('dart2js:noInline')
+  static PostSetupOpts getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PostSetupOpts>(create);
+  static PostSetupOpts? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get dataDir => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set dataDir($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasDataDir() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDataDir() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get numUnits => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set numUnits($core.int v) { $_setUnsignedInt32(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasNumUnits() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNumUnits() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get numFiles => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set numFiles($core.int v) { $_setUnsignedInt32(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasNumFiles() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearNumFiles() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.int get computeProviderId => $_getIZ(3);
+  @$pb.TagNumber(4)
+  set computeProviderId($core.int v) { $_setUnsignedInt32(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasComputeProviderId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearComputeProviderId() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.bool get throttle => $_getBF(4);
+  @$pb.TagNumber(5)
+  set throttle($core.bool v) { $_setBool(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasThrottle() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearThrottle() => clearField(5);
+}
+
+class PostSetupStatus extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PostSetupStatus', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
+    ..e<PostSetupStatus_State>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: PostSetupStatus_State.STATE_UNSPECIFIED, valueOf: PostSetupStatus_State.valueOf, enumValues: PostSetupStatus_State.values)
+    ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'numLabelsWritten', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOM<PostSetupOpts>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'opts', subBuilder: PostSetupOpts.create)
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'errorMessage')
+    ..hasRequiredFields = false
+  ;
+
+  PostSetupStatus._() : super();
+  factory PostSetupStatus({
+    PostSetupStatus_State? state,
+    $fixnum.Int64? numLabelsWritten,
+    PostSetupOpts? opts,
+    $core.String? errorMessage,
+  }) {
+    final _result = create();
+    if (state != null) {
+      _result.state = state;
+    }
+    if (numLabelsWritten != null) {
+      _result.numLabelsWritten = numLabelsWritten;
+    }
+    if (opts != null) {
+      _result.opts = opts;
+    }
+    if (errorMessage != null) {
+      _result.errorMessage = errorMessage;
+    }
+    return _result;
+  }
+  factory PostSetupStatus.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory PostSetupStatus.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  PostSetupStatus clone() => PostSetupStatus()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  PostSetupStatus copyWith(void Function(PostSetupStatus) updates) => super.copyWith((message) => updates(message as PostSetupStatus)) as PostSetupStatus; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PostSetupStatus create() => PostSetupStatus._();
+  PostSetupStatus createEmptyInstance() => create();
+  static $pb.PbList<PostSetupStatus> createRepeated() => $pb.PbList<PostSetupStatus>();
+  @$core.pragma('dart2js:noInline')
+  static PostSetupStatus getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PostSetupStatus>(create);
+  static PostSetupStatus? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  PostSetupStatus_State get state => $_getN(0);
+  @$pb.TagNumber(1)
+  set state(PostSetupStatus_State v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasState() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearState() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get numLabelsWritten => $_getI64(1);
+  @$pb.TagNumber(2)
+  set numLabelsWritten($fixnum.Int64 v) { $_setInt64(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasNumLabelsWritten() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNumLabelsWritten() => clearField(2);
+
+  @$pb.TagNumber(3)
+  PostSetupOpts get opts => $_getN(2);
+  @$pb.TagNumber(3)
+  set opts(PostSetupOpts v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasOpts() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearOpts() => clearField(3);
+  @$pb.TagNumber(3)
+  PostSetupOpts ensureOpts() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $core.String get errorMessage => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set errorMessage($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasErrorMessage() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearErrorMessage() => clearField(4);
 }
 

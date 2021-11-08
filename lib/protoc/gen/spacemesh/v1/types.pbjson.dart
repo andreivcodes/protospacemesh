@@ -155,12 +155,12 @@ const Activation$json = const {
     const {'1': 'smesher_id', '3': 3, '4': 1, '5': 11, '6': '.spacemesh.v1.SmesherId', '10': 'smesherId'},
     const {'1': 'coinbase', '3': 4, '4': 1, '5': 11, '6': '.spacemesh.v1.AccountId', '10': 'coinbase'},
     const {'1': 'prev_atx', '3': 5, '4': 1, '5': 11, '6': '.spacemesh.v1.ActivationId', '10': 'prevAtx'},
-    const {'1': 'commitment_size', '3': 6, '4': 1, '5': 4, '10': 'commitmentSize'},
+    const {'1': 'num_units', '3': 6, '4': 1, '5': 13, '10': 'numUnits'},
   ],
 };
 
 /// Descriptor for `Activation`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List activationDescriptor = $convert.base64Decode('CgpBY3RpdmF0aW9uEioKAmlkGAEgASgLMhouc3BhY2VtZXNoLnYxLkFjdGl2YXRpb25JZFICaWQSLwoFbGF5ZXIYAiABKAsyGS5zcGFjZW1lc2gudjEuTGF5ZXJOdW1iZXJSBWxheWVyEjYKCnNtZXNoZXJfaWQYAyABKAsyFy5zcGFjZW1lc2gudjEuU21lc2hlcklkUglzbWVzaGVySWQSMwoIY29pbmJhc2UYBCABKAsyFy5zcGFjZW1lc2gudjEuQWNjb3VudElkUghjb2luYmFzZRI1CghwcmV2X2F0eBgFIAEoCzIaLnNwYWNlbWVzaC52MS5BY3RpdmF0aW9uSWRSB3ByZXZBdHgSJwoPY29tbWl0bWVudF9zaXplGAYgASgEUg5jb21taXRtZW50U2l6ZQ==');
+final $typed_data.Uint8List activationDescriptor = $convert.base64Decode('CgpBY3RpdmF0aW9uEioKAmlkGAEgASgLMhouc3BhY2VtZXNoLnYxLkFjdGl2YXRpb25JZFICaWQSLwoFbGF5ZXIYAiABKAsyGS5zcGFjZW1lc2gudjEuTGF5ZXJOdW1iZXJSBWxheWVyEjYKCnNtZXNoZXJfaWQYAyABKAsyFy5zcGFjZW1lc2gudjEuU21lc2hlcklkUglzbWVzaGVySWQSMwoIY29pbmJhc2UYBCABKAsyFy5zcGFjZW1lc2gudjEuQWNjb3VudElkUghjb2luYmFzZRI1CghwcmV2X2F0eBgFIAEoCzIaLnNwYWNlbWVzaC52MS5BY3RpdmF0aW9uSWRSB3ByZXZBdHgSGwoJbnVtX3VuaXRzGAYgASgNUghudW1Vbml0cw==');
 @$core.Deprecated('Use transactionDescriptor instead')
 const Transaction$json = const {
   '1': 'Transaction',
@@ -181,6 +181,17 @@ const Transaction$json = const {
 
 /// Descriptor for `Transaction`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List transactionDescriptor = $convert.base64Decode('CgtUcmFuc2FjdGlvbhIrCgJpZBgBIAEoCzIbLnNwYWNlbWVzaC52MS5UcmFuc2FjdGlvbklkUgJpZBJMCg1jb2luX3RyYW5zZmVyGAIgASgLMiUuc3BhY2VtZXNoLnYxLkNvaW5UcmFuc2ZlclRyYW5zYWN0aW9uSABSDGNvaW5UcmFuc2ZlchJPCg5zbWFydF9jb250cmFjdBgDIAEoCzImLnNwYWNlbWVzaC52MS5TbWFydENvbnRyYWN0VHJhbnNhY3Rpb25IAFINc21hcnRDb250cmFjdBIvCgZzZW5kZXIYBCABKAsyFy5zcGFjZW1lc2gudjEuQWNjb3VudElkUgZzZW5kZXISOQoLZ2FzX29mZmVyZWQYBSABKAsyGC5zcGFjZW1lc2gudjEuR2FzT2ZmZXJlZFIKZ2FzT2ZmZXJlZBIsCgZhbW91bnQYBiABKAsyFC5zcGFjZW1lc2gudjEuQW1vdW50UgZhbW91bnQSGAoHY291bnRlchgHIAEoBFIHY291bnRlchI1CglzaWduYXR1cmUYCCABKAsyFy5zcGFjZW1lc2gudjEuU2lnbmF0dXJlUglzaWduYXR1cmVCBwoFZGF0dW0=');
+@$core.Deprecated('Use meshTransactionDescriptor instead')
+const MeshTransaction$json = const {
+  '1': 'MeshTransaction',
+  '2': const [
+    const {'1': 'transaction', '3': 1, '4': 1, '5': 11, '6': '.spacemesh.v1.Transaction', '10': 'transaction'},
+    const {'1': 'layer_id', '3': 2, '4': 1, '5': 11, '6': '.spacemesh.v1.LayerNumber', '10': 'layerId'},
+  ],
+};
+
+/// Descriptor for `MeshTransaction`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List meshTransactionDescriptor = $convert.base64Decode('Cg9NZXNoVHJhbnNhY3Rpb24SOwoLdHJhbnNhY3Rpb24YASABKAsyGS5zcGFjZW1lc2gudjEuVHJhbnNhY3Rpb25SC3RyYW5zYWN0aW9uEjQKCGxheWVyX2lkGAIgASgLMhkuc3BhY2VtZXNoLnYxLkxheWVyTnVtYmVyUgdsYXllcklk');
 @$core.Deprecated('Use rewardDescriptor instead')
 const Reward$json = const {
   '1': 'Reward',
@@ -202,11 +213,13 @@ const Block$json = const {
   '2': const [
     const {'1': 'id', '3': 1, '4': 1, '5': 12, '10': 'id'},
     const {'1': 'transactions', '3': 2, '4': 3, '5': 11, '6': '.spacemesh.v1.Transaction', '10': 'transactions'},
+    const {'1': 'activation_id', '3': 3, '4': 1, '5': 11, '6': '.spacemesh.v1.ActivationId', '10': 'activationId'},
+    const {'1': 'smesher_id', '3': 4, '4': 1, '5': 11, '6': '.spacemesh.v1.SmesherId', '10': 'smesherId'},
   ],
 };
 
 /// Descriptor for `Block`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List blockDescriptor = $convert.base64Decode('CgVCbG9jaxIOCgJpZBgBIAEoDFICaWQSPQoMdHJhbnNhY3Rpb25zGAIgAygLMhkuc3BhY2VtZXNoLnYxLlRyYW5zYWN0aW9uUgx0cmFuc2FjdGlvbnM=');
+final $typed_data.Uint8List blockDescriptor = $convert.base64Decode('CgVCbG9jaxIOCgJpZBgBIAEoDFICaWQSPQoMdHJhbnNhY3Rpb25zGAIgAygLMhkuc3BhY2VtZXNoLnYxLlRyYW5zYWN0aW9uUgx0cmFuc2FjdGlvbnMSPwoNYWN0aXZhdGlvbl9pZBgDIAEoCzIaLnNwYWNlbWVzaC52MS5BY3RpdmF0aW9uSWRSDGFjdGl2YXRpb25JZBI2CgpzbWVzaGVyX2lkGAQgASgLMhcuc3BhY2VtZXNoLnYxLlNtZXNoZXJJZFIJc21lc2hlcklk');
 @$core.Deprecated('Use layerDescriptor instead')
 const Layer$json = const {
   '1': 'Layer',

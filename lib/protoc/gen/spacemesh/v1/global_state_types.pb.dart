@@ -10,7 +10,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'types.pb.dart' as $8;
+import 'types.pb.dart' as $0;
 
 import 'global_state_types.pbenum.dart';
 
@@ -19,14 +19,14 @@ export 'global_state_types.pbenum.dart';
 class AccountState extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AccountState', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'counter', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$8.Amount>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'balance', subBuilder: $8.Amount.create)
+    ..aOM<$0.Amount>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'balance', subBuilder: $0.Amount.create)
     ..hasRequiredFields = false
   ;
 
   AccountState._() : super();
   factory AccountState({
     $fixnum.Int64? counter,
-    $8.Amount? balance,
+    $0.Amount? balance,
   }) {
     final _result = create();
     if (counter != null) {
@@ -68,20 +68,20 @@ class AccountState extends $pb.GeneratedMessage {
   void clearCounter() => clearField(1);
 
   @$pb.TagNumber(2)
-  $8.Amount get balance => $_getN(1);
+  $0.Amount get balance => $_getN(1);
   @$pb.TagNumber(2)
-  set balance($8.Amount v) { setField(2, v); }
+  set balance($0.Amount v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasBalance() => $_has(1);
   @$pb.TagNumber(2)
   void clearBalance() => clearField(2);
   @$pb.TagNumber(2)
-  $8.Amount ensureBalance() => $_ensure(1);
+  $0.Amount ensureBalance() => $_ensure(1);
 }
 
 class Account extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Account', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$8.AccountId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountId', subBuilder: $8.AccountId.create)
+    ..aOM<$0.AccountId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountId', subBuilder: $0.AccountId.create)
     ..aOM<AccountState>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'stateCurrent', subBuilder: AccountState.create)
     ..aOM<AccountState>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'stateProjected', subBuilder: AccountState.create)
     ..hasRequiredFields = false
@@ -89,7 +89,7 @@ class Account extends $pb.GeneratedMessage {
 
   Account._() : super();
   factory Account({
-    $8.AccountId? accountId,
+    $0.AccountId? accountId,
     AccountState? stateCurrent,
     AccountState? stateProjected,
   }) {
@@ -127,15 +127,15 @@ class Account extends $pb.GeneratedMessage {
   static Account? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $8.AccountId get accountId => $_getN(0);
+  $0.AccountId get accountId => $_getN(0);
   @$pb.TagNumber(1)
-  set accountId($8.AccountId v) { setField(1, v); }
+  set accountId($0.AccountId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAccountId() => $_has(0);
   @$pb.TagNumber(1)
   void clearAccountId() => clearField(1);
   @$pb.TagNumber(1)
-  $8.AccountId ensureAccountId() => $_ensure(0);
+  $0.AccountId ensureAccountId() => $_ensure(0);
 
   @$pb.TagNumber(2)
   AccountState get stateCurrent => $_getN(1);
@@ -162,13 +162,13 @@ class Account extends $pb.GeneratedMessage {
 
 class AccountRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AccountRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$8.AccountId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountId', subBuilder: $8.AccountId.create)
+    ..aOM<$0.AccountId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountId', subBuilder: $0.AccountId.create)
     ..hasRequiredFields = false
   ;
 
   AccountRequest._() : super();
   factory AccountRequest({
-    $8.AccountId? accountId,
+    $0.AccountId? accountId,
   }) {
     final _result = create();
     if (accountId != null) {
@@ -198,15 +198,15 @@ class AccountRequest extends $pb.GeneratedMessage {
   static AccountRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $8.AccountId get accountId => $_getN(0);
+  $0.AccountId get accountId => $_getN(0);
   @$pb.TagNumber(1)
-  set accountId($8.AccountId v) { setField(1, v); }
+  set accountId($0.AccountId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAccountId() => $_has(0);
   @$pb.TagNumber(1)
   void clearAccountId() => clearField(1);
   @$pb.TagNumber(1)
-  $8.AccountId ensureAccountId() => $_ensure(0);
+  $0.AccountId ensureAccountId() => $_ensure(0);
 }
 
 class AccountResponse extends $pb.GeneratedMessage {
@@ -260,14 +260,14 @@ class AccountResponse extends $pb.GeneratedMessage {
 
 class AccountDataFilter extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AccountDataFilter', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$8.AccountId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountId', subBuilder: $8.AccountId.create)
+    ..aOM<$0.AccountId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountId', subBuilder: $0.AccountId.create)
     ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountDataFlags', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
   AccountDataFilter._() : super();
   factory AccountDataFilter({
-    $8.AccountId? accountId,
+    $0.AccountId? accountId,
     $core.int? accountDataFlags,
   }) {
     final _result = create();
@@ -301,15 +301,15 @@ class AccountDataFilter extends $pb.GeneratedMessage {
   static AccountDataFilter? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $8.AccountId get accountId => $_getN(0);
+  $0.AccountId get accountId => $_getN(0);
   @$pb.TagNumber(1)
-  set accountId($8.AccountId v) { setField(1, v); }
+  set accountId($0.AccountId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAccountId() => $_has(0);
   @$pb.TagNumber(1)
   void clearAccountId() => clearField(1);
   @$pb.TagNumber(1)
-  $8.AccountId ensureAccountId() => $_ensure(0);
+  $0.AccountId ensureAccountId() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.int get accountDataFlags => $_getIZ(1);
@@ -498,11 +498,11 @@ class AccountDataQueryRequest extends $pb.GeneratedMessage {
 
 class TransactionReceipt extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransactionReceipt', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$8.TransactionId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', subBuilder: $8.TransactionId.create)
+    ..aOM<$0.TransactionId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', subBuilder: $0.TransactionId.create)
     ..e<TransactionReceipt_TransactionResult>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'result', $pb.PbFieldType.OE, defaultOrMaker: TransactionReceipt_TransactionResult.TRANSACTION_RESULT_UNSPECIFIED, valueOf: TransactionReceipt_TransactionResult.valueOf, enumValues: TransactionReceipt_TransactionResult.values)
     ..a<$fixnum.Int64>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'gasUsed', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$8.Amount>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fee', subBuilder: $8.Amount.create)
-    ..aOM<$8.LayerNumber>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'layer', subBuilder: $8.LayerNumber.create)
+    ..aOM<$0.Amount>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fee', subBuilder: $0.Amount.create)
+    ..aOM<$0.LayerNumber>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'layer', subBuilder: $0.LayerNumber.create)
     ..a<$core.int>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'index', $pb.PbFieldType.OU3)
     ..a<$core.List<$core.int>>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'svmData', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
@@ -510,11 +510,11 @@ class TransactionReceipt extends $pb.GeneratedMessage {
 
   TransactionReceipt._() : super();
   factory TransactionReceipt({
-    $8.TransactionId? id,
+    $0.TransactionId? id,
     TransactionReceipt_TransactionResult? result,
     $fixnum.Int64? gasUsed,
-    $8.Amount? fee,
-    $8.LayerNumber? layer,
+    $0.Amount? fee,
+    $0.LayerNumber? layer,
     $core.int? index,
     $core.List<$core.int>? svmData,
   }) {
@@ -564,15 +564,15 @@ class TransactionReceipt extends $pb.GeneratedMessage {
   static TransactionReceipt? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $8.TransactionId get id => $_getN(0);
+  $0.TransactionId get id => $_getN(0);
   @$pb.TagNumber(1)
-  set id($8.TransactionId v) { setField(1, v); }
+  set id($0.TransactionId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
   void clearId() => clearField(1);
   @$pb.TagNumber(1)
-  $8.TransactionId ensureId() => $_ensure(0);
+  $0.TransactionId ensureId() => $_ensure(0);
 
   @$pb.TagNumber(2)
   TransactionReceipt_TransactionResult get result => $_getN(1);
@@ -593,26 +593,26 @@ class TransactionReceipt extends $pb.GeneratedMessage {
   void clearGasUsed() => clearField(3);
 
   @$pb.TagNumber(4)
-  $8.Amount get fee => $_getN(3);
+  $0.Amount get fee => $_getN(3);
   @$pb.TagNumber(4)
-  set fee($8.Amount v) { setField(4, v); }
+  set fee($0.Amount v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasFee() => $_has(3);
   @$pb.TagNumber(4)
   void clearFee() => clearField(4);
   @$pb.TagNumber(4)
-  $8.Amount ensureFee() => $_ensure(3);
+  $0.Amount ensureFee() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $8.LayerNumber get layer => $_getN(4);
+  $0.LayerNumber get layer => $_getN(4);
   @$pb.TagNumber(5)
-  set layer($8.LayerNumber v) { setField(5, v); }
+  set layer($0.LayerNumber v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasLayer() => $_has(4);
   @$pb.TagNumber(5)
   void clearLayer() => clearField(5);
   @$pb.TagNumber(5)
-  $8.LayerNumber ensureLayer() => $_ensure(4);
+  $0.LayerNumber ensureLayer() => $_ensure(4);
 
   @$pb.TagNumber(6)
   $core.int get index => $_getIZ(5);
@@ -649,7 +649,7 @@ class AccountData extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AccountData', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
-    ..aOM<$8.Reward>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'reward', subBuilder: $8.Reward.create)
+    ..aOM<$0.Reward>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'reward', subBuilder: $0.Reward.create)
     ..aOM<TransactionReceipt>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'receipt', subBuilder: TransactionReceipt.create)
     ..aOM<Account>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountWrapper', subBuilder: Account.create)
     ..hasRequiredFields = false
@@ -657,7 +657,7 @@ class AccountData extends $pb.GeneratedMessage {
 
   AccountData._() : super();
   factory AccountData({
-    $8.Reward? reward,
+    $0.Reward? reward,
     TransactionReceipt? receipt,
     Account? accountWrapper,
   }) {
@@ -698,15 +698,15 @@ class AccountData extends $pb.GeneratedMessage {
   void clearDatum() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
-  $8.Reward get reward => $_getN(0);
+  $0.Reward get reward => $_getN(0);
   @$pb.TagNumber(1)
-  set reward($8.Reward v) { setField(1, v); }
+  set reward($0.Reward v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasReward() => $_has(0);
   @$pb.TagNumber(1)
   void clearReward() => clearField(1);
   @$pb.TagNumber(1)
-  $8.Reward ensureReward() => $_ensure(0);
+  $0.Reward ensureReward() => $_ensure(0);
 
   @$pb.TagNumber(2)
   TransactionReceipt get receipt => $_getN(1);
@@ -788,13 +788,13 @@ class AccountDataQueryResponse extends $pb.GeneratedMessage {
 
 class SmesherRewardStreamRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SmesherRewardStreamRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$8.SmesherId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', subBuilder: $8.SmesherId.create)
+    ..aOM<$0.SmesherId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', subBuilder: $0.SmesherId.create)
     ..hasRequiredFields = false
   ;
 
   SmesherRewardStreamRequest._() : super();
   factory SmesherRewardStreamRequest({
-    $8.SmesherId? id,
+    $0.SmesherId? id,
   }) {
     final _result = create();
     if (id != null) {
@@ -824,26 +824,26 @@ class SmesherRewardStreamRequest extends $pb.GeneratedMessage {
   static SmesherRewardStreamRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $8.SmesherId get id => $_getN(0);
+  $0.SmesherId get id => $_getN(0);
   @$pb.TagNumber(1)
-  set id($8.SmesherId v) { setField(1, v); }
+  set id($0.SmesherId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
   void clearId() => clearField(1);
   @$pb.TagNumber(1)
-  $8.SmesherId ensureId() => $_ensure(0);
+  $0.SmesherId ensureId() => $_ensure(0);
 }
 
 class SmesherRewardStreamResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SmesherRewardStreamResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$8.Reward>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'reward', subBuilder: $8.Reward.create)
+    ..aOM<$0.Reward>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'reward', subBuilder: $0.Reward.create)
     ..hasRequiredFields = false
   ;
 
   SmesherRewardStreamResponse._() : super();
   factory SmesherRewardStreamResponse({
-    $8.Reward? reward,
+    $0.Reward? reward,
   }) {
     final _result = create();
     if (reward != null) {
@@ -873,20 +873,20 @@ class SmesherRewardStreamResponse extends $pb.GeneratedMessage {
   static SmesherRewardStreamResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $8.Reward get reward => $_getN(0);
+  $0.Reward get reward => $_getN(0);
   @$pb.TagNumber(1)
-  set reward($8.Reward v) { setField(1, v); }
+  set reward($0.Reward v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasReward() => $_has(0);
   @$pb.TagNumber(1)
   void clearReward() => clearField(1);
   @$pb.TagNumber(1)
-  $8.Reward ensureReward() => $_ensure(0);
+  $0.Reward ensureReward() => $_ensure(0);
 }
 
 class SmesherDataQueryRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SmesherDataQueryRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$8.SmesherId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'smesherId', subBuilder: $8.SmesherId.create)
+    ..aOM<$0.SmesherId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'smesherId', subBuilder: $0.SmesherId.create)
     ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'maxResults', $pb.PbFieldType.OU3)
     ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'offset', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
@@ -894,7 +894,7 @@ class SmesherDataQueryRequest extends $pb.GeneratedMessage {
 
   SmesherDataQueryRequest._() : super();
   factory SmesherDataQueryRequest({
-    $8.SmesherId? smesherId,
+    $0.SmesherId? smesherId,
     $core.int? maxResults,
     $core.int? offset,
   }) {
@@ -932,15 +932,15 @@ class SmesherDataQueryRequest extends $pb.GeneratedMessage {
   static SmesherDataQueryRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $8.SmesherId get smesherId => $_getN(0);
+  $0.SmesherId get smesherId => $_getN(0);
   @$pb.TagNumber(1)
-  set smesherId($8.SmesherId v) { setField(1, v); }
+  set smesherId($0.SmesherId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasSmesherId() => $_has(0);
   @$pb.TagNumber(1)
   void clearSmesherId() => clearField(1);
   @$pb.TagNumber(1)
-  $8.SmesherId ensureSmesherId() => $_ensure(0);
+  $0.SmesherId ensureSmesherId() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.int get maxResults => $_getIZ(1);
@@ -964,14 +964,14 @@ class SmesherDataQueryRequest extends $pb.GeneratedMessage {
 class SmesherDataQueryResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SmesherDataQueryResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
     ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'totalResults', $pb.PbFieldType.OU3)
-    ..pc<$8.Reward>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'rewards', $pb.PbFieldType.PM, subBuilder: $8.Reward.create)
+    ..pc<$0.Reward>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'rewards', $pb.PbFieldType.PM, subBuilder: $0.Reward.create)
     ..hasRequiredFields = false
   ;
 
   SmesherDataQueryResponse._() : super();
   factory SmesherDataQueryResponse({
     $core.int? totalResults,
-    $core.Iterable<$8.Reward>? rewards,
+    $core.Iterable<$0.Reward>? rewards,
   }) {
     final _result = create();
     if (totalResults != null) {
@@ -1013,20 +1013,20 @@ class SmesherDataQueryResponse extends $pb.GeneratedMessage {
   void clearTotalResults() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$8.Reward> get rewards => $_getList(1);
+  $core.List<$0.Reward> get rewards => $_getList(1);
 }
 
 class GlobalStateHash extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GlobalStateHash', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'rootHash', $pb.PbFieldType.OY)
-    ..aOM<$8.LayerNumber>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'layer', subBuilder: $8.LayerNumber.create)
+    ..aOM<$0.LayerNumber>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'layer', subBuilder: $0.LayerNumber.create)
     ..hasRequiredFields = false
   ;
 
   GlobalStateHash._() : super();
   factory GlobalStateHash({
     $core.List<$core.int>? rootHash,
-    $8.LayerNumber? layer,
+    $0.LayerNumber? layer,
   }) {
     final _result = create();
     if (rootHash != null) {
@@ -1068,15 +1068,15 @@ class GlobalStateHash extends $pb.GeneratedMessage {
   void clearRootHash() => clearField(1);
 
   @$pb.TagNumber(2)
-  $8.LayerNumber get layer => $_getN(1);
+  $0.LayerNumber get layer => $_getN(1);
   @$pb.TagNumber(2)
-  set layer($8.LayerNumber v) { setField(2, v); }
+  set layer($0.LayerNumber v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasLayer() => $_has(1);
   @$pb.TagNumber(2)
   void clearLayer() => clearField(2);
   @$pb.TagNumber(2)
-  $8.LayerNumber ensureLayer() => $_ensure(1);
+  $0.LayerNumber ensureLayer() => $_ensure(1);
 }
 
 class GlobalStateHashRequest extends $pb.GeneratedMessage {
@@ -1222,7 +1222,7 @@ class GlobalStateData extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GlobalStateData', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 4])
-    ..aOM<$8.Reward>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'reward', subBuilder: $8.Reward.create)
+    ..aOM<$0.Reward>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'reward', subBuilder: $0.Reward.create)
     ..aOM<TransactionReceipt>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'receipt', subBuilder: TransactionReceipt.create)
     ..aOM<Account>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountWrapper', subBuilder: Account.create)
     ..aOM<GlobalStateHash>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'globalState', subBuilder: GlobalStateHash.create)
@@ -1231,7 +1231,7 @@ class GlobalStateData extends $pb.GeneratedMessage {
 
   GlobalStateData._() : super();
   factory GlobalStateData({
-    $8.Reward? reward,
+    $0.Reward? reward,
     TransactionReceipt? receipt,
     Account? accountWrapper,
     GlobalStateHash? globalState,
@@ -1276,15 +1276,15 @@ class GlobalStateData extends $pb.GeneratedMessage {
   void clearDatum() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
-  $8.Reward get reward => $_getN(0);
+  $0.Reward get reward => $_getN(0);
   @$pb.TagNumber(1)
-  set reward($8.Reward v) { setField(1, v); }
+  set reward($0.Reward v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasReward() => $_has(0);
   @$pb.TagNumber(1)
   void clearReward() => clearField(1);
   @$pb.TagNumber(1)
-  $8.Reward ensureReward() => $_ensure(0);
+  $0.Reward ensureReward() => $_ensure(0);
 
   @$pb.TagNumber(2)
   TransactionReceipt get receipt => $_getN(1);
@@ -1400,13 +1400,13 @@ class AppEventStreamRequest extends $pb.GeneratedMessage {
 
 class AppEventStreamResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AppEventStreamResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'spacemesh.v1'), createEmptyInstance: create)
-    ..aOM<$8.AppEvent>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'event', subBuilder: $8.AppEvent.create)
+    ..aOM<$0.AppEvent>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'event', subBuilder: $0.AppEvent.create)
     ..hasRequiredFields = false
   ;
 
   AppEventStreamResponse._() : super();
   factory AppEventStreamResponse({
-    $8.AppEvent? event,
+    $0.AppEvent? event,
   }) {
     final _result = create();
     if (event != null) {
@@ -1436,14 +1436,14 @@ class AppEventStreamResponse extends $pb.GeneratedMessage {
   static AppEventStreamResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $8.AppEvent get event => $_getN(0);
+  $0.AppEvent get event => $_getN(0);
   @$pb.TagNumber(1)
-  set event($8.AppEvent v) { setField(1, v); }
+  set event($0.AppEvent v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasEvent() => $_has(0);
   @$pb.TagNumber(1)
   void clearEvent() => clearField(1);
   @$pb.TagNumber(1)
-  $8.AppEvent ensureEvent() => $_ensure(0);
+  $0.AppEvent ensureEvent() => $_ensure(0);
 }
 
